@@ -9,23 +9,26 @@ from tqdm import tqdm
 import warnings
 warnings.filterwarnings("ignore")
 
+TIMEOUT = 0.1
 driver = webdriver.Chrome()
 url = 'https://www.imdb.com/title/tt0241527/reviews?ref_=tt_sa_3'
-time.sleep(1)
+time.sleep(TIMEOUT)
 driver.get(url)
-time.sleep(1)
+time.sleep(TIMEOUT)
 print(driver.title)
-time.sleep(1)
+time.sleep(TIMEOUT)
 body = driver.find_element(By.CSS_SELECTOR, 'body')
 body.send_keys(Keys.PAGE_DOWN)
-time.sleep(1)
+time.sleep(TIMEOUT)
 body.send_keys(Keys.PAGE_DOWN)
-time.sleep(1)
+time.sleep(TIMEOUT)
 body.send_keys(Keys.PAGE_DOWN)
 
 sel = Selector(text = driver.page_source)
 review_counts = sel.css('.lister .header span::text').extract_first().replace(',','').split(' ')[0]
+# print("review_counts:",review_counts)
 more_review_pages = int(int(review_counts)/25)
+# print("more_review_pages:",more_review_pages)
 
 for i in tqdm(range(more_review_pages)):
     try:
@@ -109,5 +112,5 @@ review_df = pd.DataFrame({
     'Review':review_list,
     'Review_Url':review_url
     })
-
+review_df.to_json('harryPotter.json', orient='records')
 review_df.to_csv('harryPotter.csv', index=False)
