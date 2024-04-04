@@ -22,7 +22,6 @@ body = driver.find_element(By.CSS_SELECTOR, 'body')
 
 sel = Selector(text = driver.page_source)
 
-movies = driver.find_elements(By.CSS_SELECTOR, 'li.ipc-metadata-list-summary-item')
 
 titles = []
 images = []
@@ -37,7 +36,9 @@ casts = []
 error_url_list = []
 error_msg_list = []
 
-noMovies = 5
+movies = driver.find_elements(By.CSS_SELECTOR, 'li.ipc-metadata-list-summary-item')
+
+noMovies = 20
 i = 1
 WAITING_TIME = 2
 
@@ -46,10 +47,10 @@ for movie in movies:
         break
     i += 1
     try:
+        # selector for the movie
         sel2 = Selector(text = movie.get_attribute('innerHTML'))
-        # from bs4 import BeautifulSoup
-        # print(BeautifulSoup(movie.get_attribute('innerHTML'), 'html.parser').prettify())
         
+        # opening info page
         try:
             wait = WebDriverWait(driver, WAITING_TIME)
             button = wait.until(EC.element_to_be_clickable(movie.find_element(By.CSS_SELECTOR, 'button.ipc-icon-button.cli-info-icon')))
@@ -63,17 +64,15 @@ for movie in movies:
                 error_url_list.append(url)
                 error_msg_list.append(e)
                 continue
-
+        
+        # selector for info page
         dialog = driver.find_element(By.CSS_SELECTOR, 'div.ipc-promptable-base__focus-lock')
-        # print("dialog is made")
         sel3 = Selector(text = dialog.get_attribute('innerHTML'))
-        # print("sel3 is made")
         try:
             img_src = sel3.css('div.ipc-media img::attr(src)').get()
             images.append(img_src)
         except:
             images.append(np.NaN)
-        
         try:
             title = sel3.css('h3.ipc-title__text.prompt-title-text::text').get()
             titles.append(title)
@@ -88,7 +87,27 @@ for movie in movies:
             yearReleased.append(np.NaN)
             durations.append(np.NaN)
             ageRatings.append(np.NaN)
+        try:
+            genre = sel3.css('ul[data-testid="btp_gl"] li::text').getall()
+            genres.append(genre)
+        except:
+            genres.append(np.NaN)
+        try:
+            ratings.append(sel3.css('span.btp_rt_ds::text').get())
+        except:
+            ratings.append(np.NaN)
+        try:
+            # Wait up to 10 seconds for the plot element to load
+            time.sleep(TIMEOUT)
+            plot_element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'div.sc-d3701649-2.cPgMft'))
+            )
+            plot = plot_element.text
+            plots.append(plot)
+        except:
+            plots.append(np.NaN)
 
+        # close the dialog
         try:
             wait = WebDriverWait(driver, WAITING_TIME)
             close_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'div.ipc-promptable-base__close button')))
@@ -111,9 +130,12 @@ review_df = pd.DataFrame({
     'Image':images,
     'Year_Released':yearReleased,
     'Duration':durations,
-    'Age_Rating':ageRatings
+    'Age_Rating':ageRatings,
+    'Genres':genres,
+    'Rating':ratings,
+    'Plots':plots
     })
 print(titles)
-#print(titles)
+print(plots)
 print("errors", error_msg_list, error_url_list)
 review_df.to_csv('imdb.csv', index = False)
