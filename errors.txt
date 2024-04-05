@@ -1,0 +1,15 @@
+ERROR MESSAGES:
+ [] ERROR URLS:
+ []
+ERROR MESSAGES:
+ [ElementClickInterceptedException(), ElementClickInterceptedException(), ElementClickInterceptedException(), ElementClickInterceptedException(), ElementClickInterceptedException(), ElementClickInterceptedException(), ElementClickInterceptedException()] 
+ERROR URLS:
+ ['https://www.imdb.com/chart/top/', 'https://www.imdb.com/chart/top/', 'https://www.imdb.com/chart/top/', 'https://www.imdb.com/chart/top/', 'https://www.imdb.com/chart/top/', 'https://www.imdb.com/chart/top/', 'https://www.imdb.com/chart/top/']
+ERROR MESSAGES:
+ [] 
+ERROR URLS:
+ []
+ERROR MESSAGES:
+ [] 
+ERROR URLS:
+ []
