@@ -13,8 +13,11 @@ import warnings
 
 LOADTIME = 1
 
-chrome_options = Options()
-chrome_options.add_argument("--headless=new")
+options = Options()
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
 
 # Initialising the webdriver
 driver = webdriver.Chrome()
@@ -180,30 +183,33 @@ for movie in movies:
                 error_msg_list.append(e)
                 continue
 
-        # # trying google search for other ratings
-        # try:
-        #     usable_str = titles[i-2].strip().replace(" ", "+")
-        #     url_google = f"https://www.google.com/search?q={usable_str}"
-        #     time.sleep(LOADTIME)
-        #     driver2 = webdriver.Chrome()
-        #     driver2.get(url_google)
-        #     google_element = driver2.find_element(By.CSS_SELECTOR, 'div.gVgAHf')
-        #     sel_google = Selector(text = google_element.get_attribute('innerHTML'))
-        #     rating = sel_google.css('span.IcqUx::text').getall()
-        #     site = sel_google.css('span.Vw8Dr.cHaqb::text').getall()
-        #     link = sel_google.css('a.hRIPCd::attr(href)').getall()
-        #     other_ratings.append((rating, site, link))
-        # except:
-        #     rating = np.NaN
-        #     site = np.NaN
-        #     link = np.NaN
-        #     other_ratings.append((rating, site, link))
+        # trying google search for other ratings
+        try:    
+            usable_str = titles[i-2].strip().replace(" ", "+")
+            url_google = f"https://www.google.com/search?q={usable_str}+movie+reviews"
+            time.sleep(LOADTIME)
+            driver2 = webdriver.Chrome()
+            driver2.get(url_google)
+            google_element = driver2.find_element(By.CSS_SELECTOR, 'div.zr7Aae.aokhrd.rVRkd.h4Y5Ke')
+            sel_google = Selector(text = google_element.get_attribute('innerHTML'))
+            rating = sel_google.css('span.gsrt.KMdzJ::text').getall()
+            site = sel_google.css('span.rhsB.pVA7K::text').getall()
+            link = sel_google.css('a.TZahnb.vIUFYd::attr(href)').getall()
+            other_ratings.append((rating, site, link))
+            driver2.quit()
+        except:
+            rating = np.NaN
+            site = np.NaN
+            link = np.NaN
+            other_ratings.append((rating, site, link))
+            driver2.quit()
 
+        # printing
+        print(titles[i-2], images[i-2], yearReleased[i-2], ageRatings[i-2], durations[i-2], genres[i-2], ratings[i-2], plots[i-2], directors[i-2], casts[i-2], trailer_links[i-2], streaming_platforms[i-2], other_ratings[i-2], sep="\n", end="\n\n", file=open("output.txt", "a"))
     except Exception as e:
         error_url_list.append(url)
         error_msg_list.append(e)
 
-print(titles, images, yearReleased, ageRatings, durations, genres, ratings, plots, directors, casts, trailer_links, streaming_platforms, other_ratings, sep="\n", end="\n\n", file=open("output.txt", "a"))
 
 review_df = pd.DataFrame({
     'Title':titles,
@@ -218,7 +224,7 @@ review_df = pd.DataFrame({
     'Casts':casts,
     'Trailer_Links':trailer_links,
     'Streaming_Platforms':streaming_platforms,
-    # 'Other_Ratings':other_ratings
+    'Other_Ratings':other_ratings
     })
 
 print("ERROR MESSAGES:\n", error_msg_list, "\nERROR URLS:\n", error_url_list, file=open("errors.txt", "a"))
