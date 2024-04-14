@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sasta IMDb</title>
+    </head>
+    <body>
+        <h1>Movie Finder (Views Page)</h1>
+        <form action="/submit" method="post">
+            <input type="text" name="movie" placeholder="Enter movie name">
+            <button type="submit">Search</button>
+        </form>
+        <h2>Movie Info:</h2>
+        <ul>
+            <% if(movie) { %>
+                <% movie.forEach(function(m) { %>
+                    <li><%= m.Title %></li>
+                    <li><%= m.Year_Released %></li>
+                    <li><%= m.Rating %></li>
+                    <li><%= m.Directors %></li>
+                    <li><%= m.Casts %></li>
+                <% }); %>
+            <% } %>
+        </ul>
+    </body>
+</html>
