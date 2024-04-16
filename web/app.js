@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 // creating an express "app"
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // all the movies used by this server
 const movies = [];
@@ -30,8 +30,22 @@ app.post('/submit', (req, res) => {
         try {
             const imdb_data = JSON.parse(data);
             const movieData = imdb_data.find((m, index, array) => movieEntered.toLowerCase() === m.Title.toLowerCase());
-            movies.push(movieData);
+            // movieData contains arrays in string form, let's parse it first then push it to movies array
+
             // no need to check if something's wrong, i kept it in ejs file
+            if(movieData) {
+                movieData.Casts = movieData.Casts.replace(/'/g, '\"');
+                movieData.Casts = JSON.parse(movieData.Casts);
+                movieData.Directors = movieData.Directors.replace(/'/g, '\"');
+                movieData.Directors = JSON.parse(movieData.Directors);
+                movieData.Other_Ratings = movieData.Other_Ratings.replace(/'/g, '\"');
+                movieData.Other_Ratings = JSON.parse(movieData.Other_Ratings);
+                movieData.Genres = movieData.Genres.replace(/'/g, '\"');
+                movieData.Genres = JSON.parse(movieData.Genres);
+                movieData.Streaming_Platforms = movieData.Streaming_Platforms.replace(/'/g, '\"');
+                movieData.Streaming_Platforms = JSON.parse(movieData.Streaming_Platforms);
+            }
+            movies.push(movieData);
             res.redirect('/'); 
         }
         catch {

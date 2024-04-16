@@ -12,22 +12,43 @@
         </form>
 
         <!-- displaying movie info -->
-        <ul>
-            <%if(movies.length > 0 && movies[movies.length-1] != undefined){ %>
+        <%if(movies.length > 0 && movies[movies.length-1] != undefined){ %>
+            <ul>
                 <h2>Movie Info:</h2>
                 <% currentMovie = movies[movies.length -1] %>
                  <li>Title: <%= currentMovie.Title %> </li>
                  <li>Year Released: <%= currentMovie.Year_Released %></li>
                  <li>Duration: <%= currentMovie.Duration %></li>
                  <li>Rating: <%= currentMovie.Rating %></li>
-                 <li>Genre: <%= currentMovie.Genres %></li>
-                 <li>Director: <%= currentMovie.Directors.toString(); %></li>
-                 <li>Casts: <%= currentMovie.Casts %></li>
+                 <li>Genre: <%= currentMovie.Genres.join(", ") %></li>
+                 <li>Director: <%= currentMovie.Directors.join(", "); %></li>
+                 <li>Casts: <%= currentMovie.Casts.join(", ") %></li>
                  <li><a style="color: blue;" href="<%= currentMovie.Trailer_Links%>" >Trailer</a></li>
-            <% } else if (movies.length == 0) { %>
-            <% } else { %>
-                <li>Sorry, We couldn't find the movie</li>
+                <% if(currentMovie.Streaming_Platforms[0].length > 0) { %>
+                    <li>Streaming Platforms:
+                        <ul>
+                            <% for(let i=0; i<currentMovie.Streaming_Platforms[0].length; i++) { %>
+                                <li><a style="color: blue;" href="<%= currentMovie.Streaming_Platforms[1][i] %>"><%= currentMovie.Streaming_Platforms[0][i] %></a></li>
+                            <% } %>
+                        </ul>
+                    </li>
+                <% } %>
+                <% if(currentMovie.Other_Ratings[0].length > 0) { %>
+                    <li>Other Ratings:
+                        <ul>
+                            <% for(let i=0; i<currentMovie.Other_Ratings[0].length; i++) { %>
+                                <li><a style="color: blue;" href="<%= currentMovie.Other_Ratings[2][i] %>"><%= currentMovie.Other_Ratings[1][i] %></a>: <%= currentMovie.Other_Ratings[0][i] %></li>
+                            <% } %>
+                        </ul>
+                    </li>
+                <% } %>
+            </ul>
+            <% if(currentMovie.Image) { %>
+                <img id="Image" width="200px" src="<%= currentMovie.Image %>" alt="Movie Image">
             <% } %>
-        </ul>
+        <% } else if (movies.length == 0) { %>
+        <% } else { %>
+            <li>Sorry, We couldn't find the movie</li>
+        <% } %>
     </body>
 </html>
