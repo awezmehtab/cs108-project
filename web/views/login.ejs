@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form action="/signup" method="post">
+    <h1>Login</h1>
+    <form action="/login" method="post">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
+        <button type="submit">Login</button>
     </form>
     <% if(warning == 1) { %>
         <div class="alert">
-            <strong>Username already exists</strong>
+            <strong>Invalid Username or Password</strong>
         </div>
     <% } %>
 </body>

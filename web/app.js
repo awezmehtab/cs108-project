@@ -222,7 +222,7 @@ app.post('/reset', (req, res) => {
 
 // GET request for /signup
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup', {warning: 0});
 });
 
 // POST request for /signup
@@ -250,14 +250,49 @@ app.post('/signup', (req, res) => {
             }
             else {
                 console.log('User already exists');
-                res.redirect('/signup');
+                res.render( 'signup' , {warning: 1});
             }
         }
         catch(err) {
             console.log('Sorry, something\'s wrong while parsing users.json:', err)
         }
     });
-})
+});
+
+// GET request for /login
+app.get('/login', (req, res) => {
+    res.render('login', {warning: 0});
+});
+
+// POST request for /login
+app.post('/login', (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+     
+    // opening users.json   
+    fs.readFile('users.json', 'utf8', (err, data) => {
+        // checking if it was successful
+        if(err) {
+            console.log('Somethings wrong in reading users.json: ', err);
+        }
+        try {
+            const userInfo = data ? JSON.parse(data) : [];
+            const index = userInfo.findIndex(user => user.username === username);
+            if(index !== -1 && userInfo[index].password === password) {
+                ratedMovies = userInfo[index].ratedMovies;
+                ratings = userInfo[index].ratings;
+                res.render('userRatings', { ratedMovies: ratedMovies, ratings: ratings, warning: 0, suggestedMovies: [] });
+            }
+            else {
+                console.log('User doesn\'t exist or password is wrong');
+                res.render('login', {warning: 1});
+            }
+        }
+        catch(err) {
+            console.log('Sorry, something\'s wrong while parsing users.json:', err)
+        }
+    });
+});
 
 // my middleware to handle error
 app.use((err, req, res, next) => {
