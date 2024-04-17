@@ -108,9 +108,10 @@ app.post('/ratings', (req, res) => {
                 ratedMovies.push(movie);
                 ratings.push(rating);
             }
-        } else {
-            warning = 2; // 2 represents invalid rating
         }
+        else {
+            warning = 2; // 2 represents invalid rating
+        };
     }
     else {
         warning = 1; // 1 represents movie not found
@@ -123,6 +124,7 @@ app.post('/ratings', (req, res) => {
     genreTotalRating = {}
     genreRating = {}
     genreNumbers = {}
+    genreWeights = {}
     
     // gathering all genres liked by user
     ratedMovies.forEach((movie, index, array) => {
@@ -160,6 +162,11 @@ app.post('/ratings', (req, res) => {
         genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
     });
 
+    // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
+    genresLiked.forEach((genre, index, array) => {
+        genreWeights[genre] = Number(genreNumbers[genre])/ratedMovies.length;
+    });
+
     
 
     // Suggesting Movies!
@@ -174,9 +181,9 @@ app.post('/ratings', (req, res) => {
         movie.Genres.forEach((genre, j, array) => {
             if(genresLiked.indexOf(genre) !== -1) {
                 if(movieValues[i] === undefined) {
-                    movieValues[i] = Number(genreRating[genre]);
+                    movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
                 } else {
-                    movieValues[i] += Number(genreRating[genre]);
+                    movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
                 }
             }
         });
