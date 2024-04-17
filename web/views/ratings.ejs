@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>suggestions</title>
+    <title>Suggestions</title>
 </head>
 <body>
     <h1>Reviews</h1>
@@ -38,5 +38,18 @@
             <strong>Rating should be between 0 and 10</strong>
         </div>
     <% } %>
+
+    <a href="/">Want to search for movies?</a>
+    
+    <div id="suggestions">
+        <% if(suggestedMovies.length > 0) { %>
+            <ul>
+                <h2>Suggested Movies: </h2>
+                <% for(let i=0; i<suggestedMovies.length; i++) { %>
+                    <li><%= suggestedMovies[i].Title %> : <%= suggestedMovies[i].Rating %></li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
 </body>
 </html>

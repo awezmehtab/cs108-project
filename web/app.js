@@ -23,6 +23,7 @@ fs.readFile('imdb.json', 'utf8', (err, data) => {
         imdb_data.forEach((m, index, array) => {
             // movieData contains arrays in string form, let's parse it first then push it to movies array
             m.Genres = m.Genres.replace(/'/g, '\"');
+            m.Genres = JSON.parse(m.Genres);
             movieData.push(m);
         });
     }
@@ -81,7 +82,6 @@ app.post('/submit', (req, res) => {
 });
 
 ratedMovies = []
-suggestedMovies = []
 ratings = []
 
 
@@ -90,7 +90,7 @@ app.get('/ratings', (req, res) => {
     ratedMovies = [];
     ratings = [];
     warning = 0;
-    res.render('ratings', { ratedMovies: ratedMovies, ratings: ratings, warning: warning});
+    res.render('ratings', { ratedMovies: ratedMovies, ratings: ratings, warning: warning, suggestedMovies: []});
 });
 
 // POST request for /ratings
@@ -100,9 +100,7 @@ app.post('/ratings', (req, res) => {
     const movie = movieData.find((m, index, array) => movieName.toLowerCase() === m.Title.toLowerCase());
     warning = 0;
     if(movie) {
-        if (rating > 0 && rating < 10) {
-            movie.Genres = movie.Genres.replace(/'/g, '\"');
-            movie.Genres = JSON.parse(movie.Genres);
+        if (rating >= 0 && rating <= 10) {
             const index = ratedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase());
             if(index !== -1) {
                 ratings[index] = rating;
@@ -119,7 +117,7 @@ app.post('/ratings', (req, res) => {
     };
 
 
-    // Suggesting Movies!
+    // Rating Genres!
 
     genresLiked = []
     genreTotalRating = {}
@@ -162,7 +160,49 @@ app.post('/ratings', (req, res) => {
         genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
     });
 
-    res.render('ratings', { ratedMovies: ratedMovies, ratings: ratings, warning: warning });
+    
+
+    // Suggesting Movies!
+
+    // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
+    // then i'll suggest movies which have the highest value
+
+    suggestedMovies = []
+    movieValues = []
+
+    movieData.forEach((movie, i, array) => {
+        movie.Genres.forEach((genre, j, array) => {
+            if(genresLiked.indexOf(genre) !== -1) {
+                if(movieValues[i] === undefined) {
+                    movieValues[i] = Number(genreRating[genre]);
+                } else {
+                    movieValues[i] += Number(genreRating[genre]);
+                }
+            }
+        });
+    });
+
+    // suggestedMovies will contain the movies which have defined values
+    movieValues.forEach((value, i, array) => {
+        if(value !== undefined) {
+            suggestedMovies.push(movieData[i]);
+        }
+    });
+
+    // sorting suggestedMovies in descending order of values
+    suggestedMovies.sort((a, b) => {
+        return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
+    });
+
+    // removing movies which are already rated
+    suggestedMovies = suggestedMovies.filter((movie, index, array) => {
+        return ratedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
+    });
+
+    // only keeping the top 5 movies, according to movieValues
+    suggestedMovies = suggestedMovies.slice(0, 5);
+
+    res.render('ratings', { ratedMovies: ratedMovies, ratings: ratings, warning: warning, suggestedMovies: suggestedMovies});
 });
 
 // POST request for /reset
