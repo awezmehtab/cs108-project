@@ -9,7 +9,7 @@
     <h1>Reviews</h1>
     <form action="/ratings" method="post">
         <input type="text" name="movieName" placeholder="Enter Movie Name">
-        <input type="number" name="rating" step="0.1" placeholder="Enter rating" max="10">
+        <input type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10">
         <button type="submit">Submit</button>
     </form>
 
