@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suggestions</title>
+</head>
+<body>
+    <h1>Reviews</h1>
+    <form action="/ratings" method="post">
+        <input type="text" name="movieName" placeholder="Enter Movie Name">
+        <input type="number" name="rating" step="0.1" placeholder="Enter rating" max="10">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <% if(ratings.length > 0) { %>
+        <ul>
+            <h2>Rated Movies: </h2>
+            <% for(let i=0; i<ratings.length; i++) { %>
+                <li><%= ratedMovies[i].Title %> : <%= ratings[i] %></li>
+            <% } %>
+        </ul>
+    <% } %>
+
+
+    <% if(warning == 1) { %>
+        <div class="alert">
+            <strong>Movie Not Found</strong>
+        </div>
+    <% } %>
+
+    <% if(warning == 2) { %>
+        <div class="alert">
+            <strong>Rating should be between 0 and 10</strong>
+        </div>
+    <% } %>
+</body>
+</html>
