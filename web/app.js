@@ -10,6 +10,7 @@ const port = 3002;
 // all the movies used by this server.
 // this contains an array of all movies, each movie is unstringified
 const movies = [];
+// storing all the movies in imdb.json
 const movieData = []
 
 // reading imdb.json
@@ -40,7 +41,7 @@ app.get('/', (req, res) => {
     res.render('index', { movies: movies });
 });
 
-// when submitted, /submit, is used for post request
+// when submitted (searched), /submit, is used for post request
 app.post('/submit', (req, res) => {
     //response received
     const movieEntered = req.body.movieName;
@@ -112,7 +113,15 @@ app.post('/ratings', (req, res) => {
     };
 
     res.render('ratings', { ratedMovies: ratedMovies, ratings: ratings, warning: warning });
-})
+});
+
+// POST request for /reset
+// deleting ratedMovies and ratings
+app.post('/reset', (req, res) => {
+    ratedMovies = [];
+    ratings = [];
+    res.redirect('/ratings');
+});
 
 // my middleware to handle error
 app.use((err, req, res, next) => {
