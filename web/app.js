@@ -220,6 +220,45 @@ app.post('/reset', (req, res) => {
     res.redirect('/ratings');
 });
 
+// GET request for /signup
+app.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
+// POST request for /signup
+app.post('/signup', (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    // i'm storing all the usernames and passwords and user information in users.json
+    // checking if it's already there
+    fs.readFile('users.json', 'utf8', (err, data) => {
+        if(err) {
+            console.log('Somethings wrong in reading users.json: ', err);
+        }
+        try {
+            const userInfo = data ? JSON.parse(data) : [];
+            const index = userInfo.findIndex(user => user.username === username);
+            if(index === -1) {
+                userInfo.push({username: username, password: password, ratedMovies: [], ratings: []});
+                fs.writeFile('users.json', JSON.stringify(userInfo), (err) => {
+                    if(err) {
+                        console.log('Somethings wrong in writing users.json: ', err);
+                    }
+                });
+                res.render('userRatings', { ratedMovies: [], ratings: [], warning: 0, suggestedMovies: [] })
+            }
+            else {
+                console.log('User already exists');
+                res.redirect('/signup');
+            }
+        }
+        catch(err) {
+            console.log('Sorry, something\'s wrong while parsing users.json:', err)
+        }
+    });
+})
+
 // my middleware to handle error
 app.use((err, req, res, next) => {
     console.log(err);
