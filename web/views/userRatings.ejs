@@ -6,6 +6,47 @@
     <title>ratings</title>
 </head>
 <body>
-    <h1>Let's rate</h1>
+    <h1>Let's rate, <%= username %></h1>
+    <h1>Reviews</h1>
+    <form action="/userRatings?username=<%=username%>" method="post">
+        <input type="text" name="movieName" placeholder="Enter Movie Name">
+        <input type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10">
+        <button type="submit">Submit</button>
+    </form>
+
+    <% if(ratings.length > 0) { %>
+        <ul>
+            <h2>Rated Movies: </h2>
+            <% for(let i=0; i<ratings.length; i++) { %>
+                <li><%= ratedMovies[i].Title %> : <%= ratings[i] %></li>
+            <% } %>
+        </ul>
+    <% } %>
+
+
+    <% if(warning == 1) { %>
+        <div class="alert">
+            <strong>Movie Not Found</strong>
+        </div>
+    <% } %>
+
+    <% if(warning == 2) { %>
+        <div class="alert">
+            <strong>Rating should be between 0 and 10</strong>
+        </div>
+    <% } %>
+
+    <a href="/">Want to search for movies?</a>
+    
+    <div id="suggestions">
+        <% if(suggestedMovies.length > 0) { %>
+            <ul>
+                <h2>Suggested Movies: </h2>
+                <% for(let i=0; i<suggestedMovies.length; i++) { %>
+                    <li><%= suggestedMovies[i].Title %> : <%= suggestedMovies[i].Rating %></li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
 </body>
 </html>
