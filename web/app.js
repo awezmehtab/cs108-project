@@ -229,7 +229,8 @@ app.post('/reset', (req, res) => {
 
 // GET request for /signup
 app.get('/signup', (req, res) => {
-    res.render('signup', {warning: 0});
+    const username = req.query.username ? req.query.username : '';
+    res.render('signup', {warning: 0, username: username});
 });
 
 // POST request for /signup
@@ -253,11 +254,11 @@ app.post('/signup', (req, res) => {
                         console.log('Somethings wrong in writing users.json: ', err);
                     }
                 });
-                res.redirect(`/userRatings?username=${username}`);
+                res.redirect(`/?username=${username}`);
             }
             else {
                 console.log('User already exists');
-                res.render( 'signup' , {warning: 1});
+                res.render('signup', {warning: 1, username: req.query.username ? req.query.username : ''});
             }
         }
         catch(err) {
@@ -268,7 +269,8 @@ app.post('/signup', (req, res) => {
 
 // GET request for /login
 app.get('/login', (req, res) => {
-    res.render('login', {warning: 0});
+    const username = req.query.username ? req.query.username : '';
+    res.render('login', {warning: 0, username: username});
 });
 
 // POST request for /login
@@ -286,11 +288,11 @@ app.post('/login', (req, res) => {
             const userInfo = data ? JSON.parse(data) : [];
             const index = userInfo.findIndex(user => user.username === username);
             if(index !== -1 && userInfo[index].password === password) {
-                res.redirect(`/userRatings?username=${username}`);
+                res.redirect(`/?username=${username}`);
             }
             else {
                 console.log('User doesn\'t exist or password is wrong');
-                res.render('login', {warning: 1});
+                res.render('login', {warning: 1, username: username ? username : ''});
             }
         }
         catch(err) {
@@ -391,6 +393,11 @@ app.post('/userRatings', (req, res) => {
 
         };
     });
+});
+
+// GET request for /logout
+app.get('/logout', (req, res) => {
+    res.redirect('/');
 });
 
 // my middleware to handle error

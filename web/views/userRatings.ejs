@@ -8,8 +8,9 @@
 <body>
     <h1>Let's rate, <%= username %></h1>
     <a style="color: blue;" href="/?username=<%=username%>">Home</a>
-    <a style="color: blue;" href="/signup">Sign Up</a>
-    <a style="color: blue;" href="/login">Login</a>
+    <a style="color: blue;" href="/signup?username=<%=username%>">Sign Up</a>
+    <a style="color: blue;" href="/login?username=<%=username%>">Login</a>
+    <a style="color: blue;" href="/logout?username=<%=username%>">Logout</a>
     
     <h1>Reviews</h1>
     <form action="/userRatings?username=<%=username%>" method="post">

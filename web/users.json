@@ -135,7 +135,7 @@
         "ratings": [
             "9",
             "10",
-            "0",
+            "10",
             "0",
             "1.8",
             "10",
@@ -247,5 +247,17 @@
         "ratings": [
             "4"
         ]
+    },
+    {
+        "username": "hi",
+        "password": "2",
+        "ratedMovies": [],
+        "ratings": []
+    },
+    {
+        "username": "nimra",
+        "password": "87",
+        "ratedMovies": [],
+        "ratings": []
     }
 ]

@@ -11,8 +11,11 @@
         <% } %>
 
         <a style="color: blue;" href="<%= username === '' ? '/ratings' : '/userRatings?username=' + username %>">Reviews</a>
-        <a style="color: blue;" href="/signup">Sign Up</a>
-        <a style="color: blue;" href="/login">Login</a>
+        <a style="color: blue;" href="<%= username === '' ? '/signup' : '/signup?username=' + username %>">Sign Up</a>
+        <a style="color: blue;" href="<%= username === '' ? '/login' : '/login?username=' + username %>">Login</a>
+        <% if(username !== '') { %>
+            <a style="color: blue;" href="/">Logout</a>
+        <% } %>
 
         <form action="/submit" method="post">
             <input type="text" name="movieName" placeholder="Enter movie name">
@@ -59,9 +62,6 @@
         <% } else { %>
             <li>Sorry, We couldn't find the movie</li>
         <% } %>
-
-        <div id="suggestions">
-            <a style="color: blue;" href="/ratings">Want to give reviews?</a>
-        </div>
+        
     </body>
 </html>
