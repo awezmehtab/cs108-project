@@ -5,8 +5,12 @@
     </head>
     <body>
         <!-- searching movie -->
-        <h1>Movie Finder</h1>
+        <h1>Home</h1>
+        <% if(username !== '') { %>
+            <h2>Hello, <%= username %></h2>
+        <% } %>
 
+        <a style="color: blue;" href="<%= username === '' ? '/ratings' : '/userRatings?username=' + username %>">Reviews</a>
         <a style="color: blue;" href="/signup">Sign Up</a>
         <a style="color: blue;" href="/login">Login</a>
 

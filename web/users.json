@@ -134,7 +134,7 @@
         ],
         "ratings": [
             "9",
-            "7",
+            "10",
             "0",
             "0",
             "1.8",
@@ -147,5 +147,105 @@
         "password": "23",
         "ratedMovies": [],
         "ratings": []
+    },
+    {
+        "username": "new",
+        "password": "2",
+        "ratedMovies": [
+            {
+                "Title": "3 Idiots",
+                "Image": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UY107_CR1,0,72,107_.jpg",
+                "Year_Released": "2009",
+                "Duration": "2h 50min",
+                "Age_Rating": "12A",
+                "Genres": [
+                    "Comedy",
+                    "Drama"
+                ],
+                "Rating": "8.4",
+                "Plots": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them \"idiots\".",
+                "Directors": "['Rajkumar Hirani']",
+                "Casts": "['Aamir Khan', 'Madhavan', 'Mona Singh']",
+                "Trailer_Links": "https://www.imdb.com/video/vi3086596889/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['Prime Video'], ['https://www.primevideo.com/detail/amzn1.dv.gti.6ab5ef5d-dd32-c5ab-3a8f-0aff6123c065']]",
+                "Other_Ratings": "[['8.4/10', '100%', '4.7/5'], ['IMDb', 'Rotten Tomatoes', 'Studocu'], ['https://www.imdb.com/title/tt1187043/', 'https://www.rottentomatoes.com/m/3_idiots', 'https://www.studocu.com/row/document/al-majd-international-school/english/3-idiots-film-review-for-students/37448906']]"
+            },
+            {
+                "Title": "Oppenheimer",
+                "Image": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_QL75_UX72_CR0,0,72,107_.jpg",
+                "Year_Released": "2023",
+                "Duration": "3h",
+                "Age_Rating": "15",
+                "Genres": [
+                    "Biography",
+                    "Drama",
+                    "History"
+                ],
+                "Rating": "8.3",
+                "Plots": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+                "Directors": "['Christopher Nolan']",
+                "Casts": "['Cillian Murphy', 'Emily Blunt', 'Matt Damon']",
+                "Trailer_Links": "https://www.imdb.com/video/vi2053751833/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['JioCinema', 'ZEE5', 'Prime Video'], ['https://www.jiocinema.com/movies/-/3914094', 'https://www.zee5.com/global', 'https://www.primevideo.com/detail/amzn1.dv.gti.0653d989-0412-4e01-b466-f657bf48121e']]",
+                "Other_Ratings": "[['8.3/10', '93%', '90%'], ['IMDb', 'Rotten Tomatoes', 'Metacritic'], ['https://www.imdb.com/title/tt15398776/', 'https://www.rottentomatoes.com/m/oppenheimer_2023', 'https://www.metacritic.com/movie/oppenheimer/critic-reviews/']]"
+            },
+            {
+                "Title": "Schindler's List",
+                "Image": "https://m.media-amazon.com/images/M/MV5BMTg3MDc4ODgyOF5BMl5BanBnXkFtZTgwNzY1ODIyNjM@._V1_QL75_UX72_CR0,4,72,107_.jpg",
+                "Year_Released": "1993",
+                "Duration": "3h 15min",
+                "Age_Rating": "15",
+                "Genres": [
+                    "Biography",
+                    "Drama",
+                    "History"
+                ],
+                "Rating": "9.0",
+                "Plots": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+                "Directors": "['Steven Spielberg']",
+                "Casts": "['Liam Neeson', 'Ralph Fiennes', 'Ben Kingsley']",
+                "Trailer_Links": "https://www.imdb.com/video/vi1158527769/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['JioCinema', 'Netflix', 'Prime Video', 'ZEE5', 'Prime Video'], ['https://www.jiocinema.com/movies/-/3759059', 'https://www.netflix.com/watch/60036359?source=imdb', 'https://www.primevideo.com/detail/amzn1.dv.gti.9cabed31-31e5-e49a-41e9-0ea0423d2cbf', 'https://www.zee5.com/global', 'https://www.primevideo.com/detail/amzn1.dv.gti.9cabed31-31e5-e49a-41e9-0ea0423d2cbf']]",
+                "Other_Ratings": "[['98%', '9/10', '95%'], ['Rotten Tomatoes', 'IMDb', 'Metacritic'], ['https://www.rottentomatoes.com/m/schindlers_list', 'https://www.imdb.com/title/tt0108052/', 'https://www.metacritic.com/movie/schindlers-list/critic-reviews/']]"
+            }
+        ],
+        "ratings": [
+            "3",
+            "8",
+            "7"
+        ]
+    },
+    {
+        "username": "new_user",
+        "password": "1",
+        "ratedMovies": [],
+        "ratings": []
+    },
+    {
+        "username": "newer_user",
+        "password": "123",
+        "ratedMovies": [
+            {
+                "Title": "3 Idiots",
+                "Image": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UY107_CR1,0,72,107_.jpg",
+                "Year_Released": "2009",
+                "Duration": "2h 50min",
+                "Age_Rating": "12A",
+                "Genres": [
+                    "Comedy",
+                    "Drama"
+                ],
+                "Rating": "8.4",
+                "Plots": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them \"idiots\".",
+                "Directors": "['Rajkumar Hirani']",
+                "Casts": "['Aamir Khan', 'Madhavan', 'Mona Singh']",
+                "Trailer_Links": "https://www.imdb.com/video/vi3086596889/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['Prime Video'], ['https://www.primevideo.com/detail/amzn1.dv.gti.6ab5ef5d-dd32-c5ab-3a8f-0aff6123c065']]",
+                "Other_Ratings": "[['8.4/10', '100%', '4.7/5'], ['IMDb', 'Rotten Tomatoes', 'Studocu'], ['https://www.imdb.com/title/tt1187043/', 'https://www.rottentomatoes.com/m/3_idiots', 'https://www.studocu.com/row/document/al-majd-international-school/english/3-idiots-film-review-for-students/37448906']]"
+            }
+        ],
+        "ratings": [
+            "4"
+        ]
     }
 ]

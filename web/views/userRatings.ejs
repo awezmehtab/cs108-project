@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>Let's rate, <%= username %></h1>
+    <a style="color: blue;" href="/?username=<%=username%>">Home</a>
+    <a style="color: blue;" href="/signup">Sign Up</a>
+    <a style="color: blue;" href="/login">Login</a>
+    
     <h1>Reviews</h1>
     <form action="/userRatings?username=<%=username%>" method="post">
         <input type="text" name="movieName" placeholder="Enter Movie Name">

@@ -38,9 +38,104 @@ app.set('view engine', 'ejs');
 // middleware for parsing http request body
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// this a function which gives a list of top 5 suggested movies based on rated movies and ratings and movies data
+function suggestingMovies(userRatedMovies, userRatings, movieData){
+     // now let's get suggested movies data
+
+     genresLiked = [] // all the genres user liked
+     genreTotalRating = {} // total rating of each genre
+     genreRating = {} // average rating of each genre
+     genreNumbers = {} // number of movies corresponding to each genre
+     genreWeights = {} // weight assigned to each genre, which is more if the genre occured more times
+
+     // gathering all genres liked by user
+     userRatedMovies.forEach((movie, index, array) => {
+         movie.Genres.forEach((genre, index, array) => {
+             if(genresLiked.indexOf(genre) === -1) {
+                 genresLiked.push(genre);
+             }
+         });
+     });
+
+     // number of movies corresponding to each genre, minimum will be 1 ofcourse
+     userRatedMovies.forEach((movie, index, array) => {
+         movie.Genres.forEach((genre, index, array) => {
+             if(genreNumbers[genre] === undefined) {
+                 genreNumbers[genre] = 1;
+             } else {
+                 genreNumbers[genre]++;
+             }
+         });
+     });
+
+     // overall rating of each genre which is sum of ratings in each movie, which is then divided by number of movies corresponding to that genre
+     userRatedMovies.forEach((movie, i, array) => {
+         movie.Genres.forEach((genre, j, array) => {
+             if(genreTotalRating[genre] === undefined) {
+                 genreTotalRating[genre] = Number(userRatings[i]);
+             } else {
+                 genreTotalRating[genre] += Number(userRatings[i]);
+             }
+         });
+     });
+
+     // dividing by number of movies corresponding to that genre
+     genresLiked.forEach((genre, index, array) => {
+         genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
+     });
+
+     // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
+     genresLiked.forEach((genre, index, array) => {
+         genreWeights[genre] = Number(genreNumbers[genre])/userRatedMovies.length;
+     });
+
+     // Suggesting Movies!
+
+     // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
+     // then i'll suggest movies which have the highest value
+
+     suggestedMovies = []
+     movieValues = []
+
+     movieData.forEach((movie, i, array) => {
+         movie.Genres.forEach((genre, j, array) => {
+             if(genresLiked.indexOf(genre) !== -1) {
+                 if(movieValues[i] === undefined) {
+                     movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
+                 } else {
+                     movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
+                 }
+             }
+         });
+     });
+
+     // suggestedMovies will contain the movies which have defined values
+     movieValues.forEach((value, i, array) => {
+         if(value !== undefined) {
+             suggestedMovies.push(movieData[i]);
+         }
+     });
+
+     // sorting suggestedMovies in descending order of values
+     suggestedMovies.sort((a, b) => {
+         return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
+     });
+
+     // removing movies which are already rated
+     suggestedMovies = suggestedMovies.filter((movie, index, array) => {
+         return userRatedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
+     });
+
+     // only keeping the top 5 movies, according to movieValues
+     suggestedMovies = suggestedMovies.slice(0, 5);
+
+     return suggestedMovies;
+}
+
 // requesting / (get)
 app.get('/', (req, res) => {
-    res.render('index', { movies: movies });
+    const username = req.query.username ? req.query.username : '';
+    res.render('index', { movies: movies, username: username});
 });
 
 // when submitted (searched), /submit, is used for post request
@@ -118,96 +213,8 @@ app.post('/ratings', (req, res) => {
     };
 
 
-    // Rating Genres!
-
-    genresLiked = []
-    genreTotalRating = {}
-    genreRating = {}
-    genreNumbers = {}
-    genreWeights = {}
-    
-    // gathering all genres liked by user
-    ratedMovies.forEach((movie, index, array) => {
-        movie.Genres.forEach((genre, index, array) => {
-            if(genresLiked.indexOf(genre) === -1) {
-                genresLiked.push(genre);
-            }
-        });
-    });
-
-    // number of movies corresponding to each genre, minimum will be 1 ofcourse
-    ratedMovies.forEach((movie, index, array) => {
-        movie.Genres.forEach((genre, index, array) => {
-            if(genreNumbers[genre] === undefined) {
-                genreNumbers[genre] = 1;
-            } else {
-                genreNumbers[genre]++;
-            }
-        });
-    });
-
-    // overall rating of each genre which is sum of ratings in each movie, which is then divided by number of movies corresponding to that genre
-    ratedMovies.forEach((movie, i, array) => {
-        movie.Genres.forEach((genre, j, array) => {
-            if(genreTotalRating[genre] === undefined) {
-                genreTotalRating[genre] = Number(ratings[i]);
-            } else {
-                genreTotalRating[genre] += Number(ratings[i]);
-            }
-        });
-    });
-
-    // dividing by number of movies corresponding to that genre
-    genresLiked.forEach((genre, index, array) => {
-        genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
-    });
-
-    // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
-    genresLiked.forEach((genre, index, array) => {
-        genreWeights[genre] = Number(genreNumbers[genre])/ratedMovies.length;
-    });
-
-    
-
-    // Suggesting Movies!
-
-    // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
-    // then i'll suggest movies which have the highest value
-
-    suggestedMovies = []
-    movieValues = []
-
-    movieData.forEach((movie, i, array) => {
-        movie.Genres.forEach((genre, j, array) => {
-            if(genresLiked.indexOf(genre) !== -1) {
-                if(movieValues[i] === undefined) {
-                    movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
-                } else {
-                    movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
-                }
-            }
-        });
-    });
-
-    // suggestedMovies will contain the movies which have defined values
-    movieValues.forEach((value, i, array) => {
-        if(value !== undefined) {
-            suggestedMovies.push(movieData[i]);
-        }
-    });
-
-    // sorting suggestedMovies in descending order of values
-    suggestedMovies.sort((a, b) => {
-        return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
-    });
-
-    // removing movies which are already rated
-    suggestedMovies = suggestedMovies.filter((movie, index, array) => {
-        return ratedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
-    });
-
-    // only keeping the top 5 movies, according to movieValues
-    suggestedMovies = suggestedMovies.slice(0, 5);
+    // now let's get suggested movies data
+    suggestedMovies = suggestingMovies(ratedMovies, ratings, movieData);
 
     res.render('ratings', { ratedMovies: ratedMovies, ratings: ratings, warning: warning, suggestedMovies: suggestedMovies});
 });
@@ -246,7 +253,7 @@ app.post('/signup', (req, res) => {
                         console.log('Somethings wrong in writing users.json: ', err);
                     }
                 });
-                res.render('userRatings', { ratedMovies: [], ratings: [], warning: 0, suggestedMovies: [], username: username})
+                res.redirect(`/userRatings?username=${username}`);
             }
             else {
                 console.log('User already exists');
@@ -292,9 +299,9 @@ app.post('/login', (req, res) => {
     });
 });
 
+
 // GET request for /userRatings
 app.get('/userRatings', (req, res) => {
-    console.log('userRatings ko GET request aya')
     const username = req.query.username;
     warning = 0;
     userRatedMovies = [];
@@ -309,94 +316,7 @@ app.get('/userRatings', (req, res) => {
             userRatedMovies = data.find(user => user.username === username).ratedMovies;
             userRatings = data.find(user => user.username === username).ratings;
 
-            // now let's get suggested movies data
-
-            genresLiked = [] // all the genres user liked
-            genreTotalRating = {} // total rating of each genre
-            genreRating = {} // average rating of each genre
-            genreNumbers = {} // number of movies corresponding to each genre
-            genreWeights = {} // weight assigned to each genre, which is more if the genre occured more times
-
-            // gathering all genres liked by user
-            userRatedMovies.forEach((movie, index, array) => {
-                movie.Genres.forEach((genre, index, array) => {
-                    if(genresLiked.indexOf(genre) === -1) {
-                        genresLiked.push(genre);
-                    }
-                });
-            });
-
-            // number of movies corresponding to each genre, minimum will be 1 ofcourse
-            userRatedMovies.forEach((movie, index, array) => {
-                movie.Genres.forEach((genre, index, array) => {
-                    if(genreNumbers[genre] === undefined) {
-                        genreNumbers[genre] = 1;
-                    } else {
-                        genreNumbers[genre]++;
-                    }
-                });
-            });
-
-            // overall rating of each genre which is sum of ratings in each movie, which is then divided by number of movies corresponding to that genre
-            userRatedMovies.forEach((movie, i, array) => {
-                movie.Genres.forEach((genre, j, array) => {
-                    if(genreTotalRating[genre] === undefined) {
-                        genreTotalRating[genre] = Number(userRatings[i]);
-                    } else {
-                        genreTotalRating[genre] += Number(userRatings[i]);
-                    }
-                });
-            });
-
-            // dividing by number of movies corresponding to that genre
-            genresLiked.forEach((genre, index, array) => {
-                genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
-            });
-
-            // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
-            genresLiked.forEach((genre, index, array) => {
-                genreWeights[genre] = Number(genreNumbers[genre])/userRatedMovies.length;
-            });
-
-            // Suggesting Movies!
-
-            // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
-            // then i'll suggest movies which have the highest value
-
-            suggestedMovies = []
-            movieValues = []
-
-            movieData.forEach((movie, i, array) => {
-                movie.Genres.forEach((genre, j, array) => {
-                    if(genresLiked.indexOf(genre) !== -1) {
-                        if(movieValues[i] === undefined) {
-                            movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
-                        } else {
-                            movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
-                        }
-                    }
-                });
-            });
-
-            // suggestedMovies will contain the movies which have defined values
-            movieValues.forEach((value, i, array) => {
-                if(value !== undefined) {
-                    suggestedMovies.push(movieData[i]);
-                }
-            });
-
-            // sorting suggestedMovies in descending order of values
-            suggestedMovies.sort((a, b) => {
-                return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
-            });
-
-            // removing movies which are already rated
-            suggestedMovies = suggestedMovies.filter((movie, index, array) => {
-                return userRatedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
-            });
-
-            // only keeping the top 5 movies, according to movieValues
-            suggestedMovies = suggestedMovies.slice(0, 5);
+            suggestedMovies = suggestingMovies(userRatedMovies, userRatings, movieData);
 
             res.render('userRatings', { ratedMovies: userRatedMovies, ratings: userRatings, warning: warning, suggestedMovies: suggestedMovies, username: username});
         }
@@ -407,7 +327,6 @@ app.get('/userRatings', (req, res) => {
 })
 
 app.post('/userRatings', (req, res) => {
-    console.log('userRatings ko POST request aya')
     const username = req.query.username;
     const rating  = req.body.rating;
     const movieName = req.body.movieName;
@@ -450,281 +369,26 @@ app.post('/userRatings', (req, res) => {
 
                 // now let's get suggested movies data
 
-                genresLiked = [] // all the genres user liked
-                genreTotalRating = {} // total rating of each genre
-                genreRating = {} // average rating of each genre
-                genreNumbers = {} // number of movies corresponding to each genre
-                genreWeights = {} // weight assigned to each genre, which is more if the genre occured more times
-
-                // gathering all genres liked by user
-                userRatedMovies.forEach((movie, index, array) => {
-                    movie.Genres.forEach((genre, index, array) => {
-                        if(genresLiked.indexOf(genre) === -1) {
-                            genresLiked.push(genre);
-                        }
-                    });
-                });
-
-                // number of movies corresponding to each genre, minimum will be 1 ofcourse
-                userRatedMovies.forEach((movie, index, array) => {
-                    movie.Genres.forEach((genre, index, array) => {
-                        if(genreNumbers[genre] === undefined) {
-                            genreNumbers[genre] = 1;
-                        } else {
-                            genreNumbers[genre]++;
-                        }
-                    });
-                });
-
-                // overall rating of each genre which is sum of ratings in each movie, which is then divided by number of movies corresponding to that genre
-                userRatedMovies.forEach((movie, i, array) => {
-                    movie.Genres.forEach((genre, j, array) => {
-                        if(genreTotalRating[genre] === undefined) {
-                            genreTotalRating[genre] = Number(userRatings[i]);
-                        } else {
-                            genreTotalRating[genre] += Number(userRatings[i]);
-                        }
-                    });
-                });
-
-                // dividing by number of movies corresponding to that genre
-                genresLiked.forEach((genre, index, array) => {
-                    genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
-                });
-
-                // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
-                genresLiked.forEach((genre, index, array) => {
-                    genreWeights[genre] = Number(genreNumbers[genre])/userRatedMovies.length;
-                });
-
-                // Suggesting Movies!
-
-                // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
-                // then i'll suggest movies which have the highest value
-
-                suggestedMovies = []
-                movieValues = []
-
-                movieData.forEach((movie, i, array) => {
-                    movie.Genres.forEach((genre, j, array) => {
-                        if(genresLiked.indexOf(genre) !== -1) {
-                            if(movieValues[i] === undefined) {
-                                movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
-                            } else {
-                                movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
-                            }
-                        }
-                    });
-                });
-
-                // suggestedMovies will contain the movies which have defined values
-                movieValues.forEach((value, i, array) => {
-                    if(value !== undefined) {
-                        suggestedMovies.push(movieData[i]);
-                    }
-                });
-
-                // sorting suggestedMovies in descending order of values
-                suggestedMovies.sort((a, b) => {
-                    return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
-                });
-
-                // removing movies which are already rated
-                suggestedMovies = suggestedMovies.filter((movie, index, array) => {
-                    return userRatedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
-                });
-
-                // only keeping the top 5 movies, according to movieValues
-                suggestedMovies = suggestedMovies.slice(0, 5);
+                suggestedMovies = suggestingMovies(userRatedMovies, userRatings, movieData);
 
                 res.render('userRatings', { ratedMovies: userRatedMovies, ratings: userRatings, warning: warning, suggestedMovies: suggestedMovies, username: username});
+                
             }
             else {
                 warning = 2; // 2 represents invalid rating
 
-                genresLiked = [] // all the genres user liked
-                genreTotalRating = {} // total rating of each genre
-                genreRating = {} // average rating of each genre
-                genreNumbers = {} // number of movies corresponding to each genre
-                genreWeights = {} // weight assigned to each genre, which is more if the genre occured more times
-
-                // gathering all genres liked by user
-                userRatedMovies.forEach((movie, index, array) => {
-                    movie.Genres.forEach((genre, index, array) => {
-                        if(genresLiked.indexOf(genre) === -1) {
-                            genresLiked.push(genre);
-                        }
-                    });
-                });
-
-                // number of movies corresponding to each genre, minimum will be 1 ofcourse
-                userRatedMovies.forEach((movie, index, array) => {
-                    movie.Genres.forEach((genre, index, array) => {
-                        if(genreNumbers[genre] === undefined) {
-                            genreNumbers[genre] = 1;
-                        } else {
-                            genreNumbers[genre]++;
-                        }
-                    });
-                });
-
-                // overall rating of each genre which is sum of ratings in each movie, which is then divided by number of movies corresponding to that genre
-                userRatedMovies.forEach((movie, i, array) => {
-                    movie.Genres.forEach((genre, j, array) => {
-                        if(genreTotalRating[genre] === undefined) {
-                            genreTotalRating[genre] = Number(userRatings[i]);
-                        } else {
-                            genreTotalRating[genre] += Number(userRatings[i]);
-                        }
-                    });
-                });
-
-                // dividing by number of movies corresponding to that genre
-                genresLiked.forEach((genre, index, array) => {
-                    genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
-                });
-
-                // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
-                genresLiked.forEach((genre, index, array) => {
-                    genreWeights[genre] = Number(genreNumbers[genre])/userRatedMovies.length;
-                });
-
-                // Suggesting Movies!
-
-                // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
-                // then i'll suggest movies which have the highest value
-
-                suggestedMovies = []
-                movieValues = []
-
-                movieData.forEach((movie, i, array) => {
-                    movie.Genres.forEach((genre, j, array) => {
-                        if(genresLiked.indexOf(genre) !== -1) {
-                            if(movieValues[i] === undefined) {
-                                movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
-                            } else {
-                                movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
-                            }
-                        }
-                    });
-                });
-
-                // suggestedMovies will contain the movies which have defined values
-                movieValues.forEach((value, i, array) => {
-                    if(value !== undefined) {
-                        suggestedMovies.push(movieData[i]);
-                    }
-                });
-
-                // sorting suggestedMovies in descending order of values
-                suggestedMovies.sort((a, b) => {
-                    return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
-                });
-
-                // removing movies which are already rated
-                suggestedMovies = suggestedMovies.filter((movie, index, array) => {
-                    return userRatedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
-                });
-
-                // only keeping the top 5 movies, according to movieValues
-                suggestedMovies = suggestedMovies.slice(0, 5);
-
+                // now let's get suggested movies data
+                suggestedMovies = suggestingMovies(userRatedMovies, userRatings, movieData);
                 res.render('userRatings', { ratedMovies: userRatedMovies, ratings: userRatings, warning: warning, suggestedMovies: suggestedMovies, username: username});
-                
-            };
+            }
         }
         else {
             warning = 1; // 1 represents movie not found
 
-            genresLiked = [] // all the genres user liked
-            genreTotalRating = {} // total rating of each genre
-            genreRating = {} // average rating of each genre
-            genreNumbers = {} // number of movies corresponding to each genre
-            genreWeights = {} // weight assigned to each genre, which is more if the genre occured more times
-
-            // gathering all genres liked by user
-            userRatedMovies.forEach((movie, index, array) => {
-                movie.Genres.forEach((genre, index, array) => {
-                    if(genresLiked.indexOf(genre) === -1) {
-                        genresLiked.push(genre);
-                    }
-                });
-            });
-
-            // number of movies corresponding to each genre, minimum will be 1 ofcourse
-            userRatedMovies.forEach((movie, index, array) => {
-                movie.Genres.forEach((genre, index, array) => {
-                    if(genreNumbers[genre] === undefined) {
-                        genreNumbers[genre] = 1;
-                    } else {
-                        genreNumbers[genre]++;
-                    }
-                });
-            });
-
-            // overall rating of each genre which is sum of ratings in each movie, which is then divided by number of movies corresponding to that genre
-            userRatedMovies.forEach((movie, i, array) => {
-                movie.Genres.forEach((genre, j, array) => {
-                    if(genreTotalRating[genre] === undefined) {
-                        genreTotalRating[genre] = Number(userRatings[i]);
-                    } else {
-                        genreTotalRating[genre] += Number(userRatings[i]);
-                    }
-                });
-            });
-
-            // dividing by number of movies corresponding to that genre
-            genresLiked.forEach((genre, index, array) => {
-                genreRating[genre] = Number(genreTotalRating[genre])/Number(genreNumbers[genre]);
-            });
-
-            // weight assigned to each genre is proportional to the number of movies corresponding to that genre, and is between 0-1
-            genresLiked.forEach((genre, index, array) => {
-                genreWeights[genre] = Number(genreNumbers[genre])/userRatedMovies.length;
-            });
-
-            // Suggesting Movies!
-
-            // what i'm thinking is to assign each movie a value, which is the sum of ratings of all genres of that movie, if rating isn't there, then 0
-            // then i'll suggest movies which have the highest value
-
-            suggestedMovies = []
-            movieValues = []
-
-            movieData.forEach((movie, i, array) => {
-                movie.Genres.forEach((genre, j, array) => {
-                    if(genresLiked.indexOf(genre) !== -1) {
-                        if(movieValues[i] === undefined) {
-                            movieValues[i] = Number(genreRating[genre])*Number(genreWeights[genre]);
-                        } else {
-                            movieValues[i] += Number(genreRating[genre])*Number(genreWeights[genre]);
-                        }
-                    }
-                });
-            });
-
-            // suggestedMovies will contain the movies which have defined values
-            movieValues.forEach((value, i, array) => {
-                if(value !== undefined) {
-                    suggestedMovies.push(movieData[i]);
-                }
-            });
-
-            // sorting suggestedMovies in descending order of values
-            suggestedMovies.sort((a, b) => {
-                return movieValues[movieData.indexOf(b)] - movieValues[movieData.indexOf(a)];
-            });
-
-            // removing movies which are already rated
-            suggestedMovies = suggestedMovies.filter((movie, index, array) => {
-                return userRatedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === movie.Title.toLowerCase()) === -1;
-            });
-
-            // only keeping the top 5 movies, according to movieValues
-            suggestedMovies = suggestedMovies.slice(0, 5);
-
+            // now let's get suggested movies data
+            suggestedMovies = suggestingMovies(userRatedMovies, userRatings, movieData);
             res.render('userRatings', { ratedMovies: userRatedMovies, ratings: userRatings, warning: warning, suggestedMovies: suggestedMovies, username: username});
-            
+
         };
     });
 });
