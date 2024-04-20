@@ -135,7 +135,46 @@ function suggestingMovies(userRatedMovies, userRatings, movieData){
 // requesting / (get)
 app.get('/', (req, res) => {
     const username = req.query.username ? req.query.username : '';
-    res.render('index', { movies: movies, username: username});
+
+    // also giving rating by our users
+    fs.readFile('users.json', 'utf8', (err, data) => {
+        if(err) {
+            console.log('Somethings wrong in reading users.json: ', err);
+        }
+        // if there are movies searched
+        if (movies.length > 0 && movies[movies.length - 1]) {
+            const myMovie = movies[movies.length - 1];
+            let totalRating = 0;
+            let totalCount = 0;
+            let atleastOneFound = false;
+            // now we've to loop through each user and if they've rated myMovie, we've to add their rating in totalRating and increment totalCount
+            if(data) {
+                data = JSON.parse(data);
+                data.forEach((user, index, array) => {
+                    console.log('user.ratedMovies: ', user.ratedMovies)
+                    const myIndex = user.ratedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === myMovie.Title.toLowerCase());
+                    if(myIndex !== -1) {
+                        totalRating += Number(user.ratings[myIndex]);
+                        totalCount++;
+                        atleastOneFound = true;
+                    }
+                });
+                userRating = (Math.round((Number(totalRating)/Number(totalCount)) * 10) / 10).toFixed(1);
+            }
+            else {
+                userRating = '';
+            }
+            if (!atleastOneFound) {
+                userRating = '';
+            }
+        }
+        else {
+            userRating = '';
+        }
+        res.render('index', { movies: movies, username: username, userRating: userRating})
+    });  
+
+//  res.render('index', { movies: movies, username: username, userReviews: userReviews});
 });
 
 // when submitted (searched), /submit, is used for post request
@@ -168,7 +207,12 @@ app.post('/submit', (req, res) => {
             }
 
             movies.push(movieDataFound);
-            res.redirect('/'); 
+
+            if(req.query.username) {
+                res.redirect('/?username=' + req.query.username);
+            } else {
+                res.redirect('/');
+            } 
         }
         catch(err) {
             console.log('Sorry, something\'s wrong:', err)

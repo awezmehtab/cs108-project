@@ -137,7 +137,7 @@
             "10",
             "10",
             "0",
-            "1.8",
+            "2.9",
             "10",
             "2"
         ]
@@ -257,6 +257,78 @@
     {
         "username": "nimra",
         "password": "87",
+        "ratedMovies": [],
+        "ratings": []
+    },
+    {
+        "username": "saksham_jain",
+        "password": "123",
+        "ratedMovies": [
+            {
+                "Title": "3 Idiots",
+                "Image": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UY107_CR1,0,72,107_.jpg",
+                "Year_Released": "2009",
+                "Duration": "2h 50min",
+                "Age_Rating": "12A",
+                "Genres": [
+                    "Comedy",
+                    "Drama"
+                ],
+                "Rating": "8.4",
+                "Plots": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them \"idiots\".",
+                "Directors": "['Rajkumar Hirani']",
+                "Casts": "['Aamir Khan', 'Madhavan', 'Mona Singh']",
+                "Trailer_Links": "https://www.imdb.com/video/vi3086596889/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['Prime Video'], ['https://www.primevideo.com/detail/amzn1.dv.gti.6ab5ef5d-dd32-c5ab-3a8f-0aff6123c065']]",
+                "Other_Ratings": "[['8.4/10', '100%', '4.7/5'], ['IMDb', 'Rotten Tomatoes', 'Studocu'], ['https://www.imdb.com/title/tt1187043/', 'https://www.rottentomatoes.com/m/3_idiots', 'https://www.studocu.com/row/document/al-majd-international-school/english/3-idiots-film-review-for-students/37448906']]"
+            },
+            {
+                "Title": "12th Fail",
+                "Image": "https://m.media-amazon.com/images/M/MV5BOTJlY2U2ZmYtMzU3Ny00ZDI3LWEwMDYtOWIxNzdhZDI5ZWRkXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_QL75_UY107_CR5,0,72,107_.jpg",
+                "Year_Released": "2023",
+                "Duration": "2h 27min",
+                "Age_Rating": "12A",
+                "Genres": [
+                    "Biography",
+                    "Drama"
+                ],
+                "Rating": "9.0",
+                "Plots": "The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.",
+                "Directors": "['Vidhu Vinod Chopra']",
+                "Casts": "['Vikrant Massey', 'Medha Shankr', 'Anant Joshi']",
+                "Trailer_Links": "https://www.imdb.com/video/vi1088210713/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['Hotstar'], ['https://www.hotstar.com/']]",
+                "Other_Ratings": "[['9/10', '4/5', '91%'], ['IMDb', 'Times of India', 'Rotten Tomatoes'], ['https://www.imdb.com/title/tt23849204/', 'https://m.timesofindia.com/entertainment/hindi/movie-reviews/12th-fail/movie-review/104698543.cms', 'https://www.rottentomatoes.com/m/12th_fail']]"
+            },
+            {
+                "Title": "Oppenheimer",
+                "Image": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_QL75_UX72_CR0,0,72,107_.jpg",
+                "Year_Released": "2023",
+                "Duration": "3h",
+                "Age_Rating": "15",
+                "Genres": [
+                    "Biography",
+                    "Drama",
+                    "History"
+                ],
+                "Rating": "8.3",
+                "Plots": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+                "Directors": "['Christopher Nolan']",
+                "Casts": "['Cillian Murphy', 'Emily Blunt', 'Matt Damon']",
+                "Trailer_Links": "https://www.imdb.com/video/vi2053751833/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['JioCinema', 'ZEE5', 'Prime Video'], ['https://www.jiocinema.com/movies/-/3914094', 'https://www.zee5.com/global', 'https://www.primevideo.com/detail/amzn1.dv.gti.0653d989-0412-4e01-b466-f657bf48121e']]",
+                "Other_Ratings": "[['8.3/10', '93%', '90%'], ['IMDb', 'Rotten Tomatoes', 'Metacritic'], ['https://www.imdb.com/title/tt15398776/', 'https://www.rottentomatoes.com/m/oppenheimer_2023', 'https://www.metacritic.com/movie/oppenheimer/critic-reviews/']]"
+            }
+        ],
+        "ratings": [
+            "8",
+            "10",
+            "2"
+        ]
+    },
+    {
+        "username": "kyu",
+        "password": "3",
         "ratedMovies": [],
         "ratings": []
     }

@@ -17,7 +17,7 @@
             <a style="color: blue;" href="/">Logout</a>
         <% } %>
 
-        <form action="/submit" method="post">
+        <form action="<%= username !== '' ? '/submit?username=' + username : '/submit' %>" method="post">
             <input type="text" name="movieName" placeholder="Enter movie name">
             <button type="submit">Search</button>
         </form>
@@ -31,6 +31,11 @@
                  <li>Year Released: <%= currentMovie.Year_Released %></li>
                  <li>Duration: <%= currentMovie.Duration %></li>
                  <li>Rating: <%= currentMovie.Rating %></li>
+                <% if(userRating === '') { %>
+                    <li>No one rated till now!</li>
+                <% } else { %>
+                    <li>Rating by our users: <%= userRating %></li>
+                <% } %>
                  <li>Genre: <%= currentMovie.Genres.join(", ") %></li>
                  <li>Plot: <%= currentMovie.Plots %></li>
                  <li>Director: <%= currentMovie.Directors.join(", "); %></li>
@@ -62,6 +67,6 @@
         <% } else { %>
             <li>Sorry, We couldn't find the movie</li>
         <% } %>
-        
+
     </body>
 </html>
