@@ -1,7 +1,7 @@
 [
     {
         "Title": "The Shawshank Redemption",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jonathan Romney",
@@ -107,7 +107,7 @@
     },
     {
         "Title": "The Godfather",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -213,7 +213,7 @@
     },
     {
         "Title": "The Dark Knight",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Glenn Kenny",
@@ -319,17 +319,17 @@
     },
     {
         "Title": "The Godfather Part II",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "12 Angry Men",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Schindler's List",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -435,7 +435,7 @@
     },
     {
         "Title": "The Lord of the Rings: The Return of the King",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jonathan Romney",
@@ -541,7 +541,7 @@
     },
     {
         "Title": "Pulp Fiction",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Roger Ebert",
@@ -647,7 +647,7 @@
     },
     {
         "Title": "The Lord of the Rings: The Fellowship of the Ring",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Joshua Rothkopf",
@@ -753,7 +753,7 @@
     },
     {
         "Title": "The Good, the Bad and the Ugly",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ed Potton",
@@ -764,7 +764,7 @@
     },
     {
         "Title": "Forrest Gump",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Denby",
@@ -870,7 +870,7 @@
     },
     {
         "Title": "The Lord of the Rings: The Two Towers",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Alexander Walker",
@@ -976,7 +976,7 @@
     },
     {
         "Title": "Fight Club",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kevin Maher",
@@ -1067,7 +1067,7 @@
     },
     {
         "Title": "Inception",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -1173,7 +1173,7 @@
     },
     {
         "Title": "Dune: Part Two",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Philip De Semlyen",
@@ -1279,12 +1279,12 @@
     },
     {
         "Title": "Star Wars: Episode V - The Empire Strikes Back",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Matrix",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Sean Axmaker",
@@ -1390,7 +1390,7 @@
     },
     {
         "Title": "GoodFellas",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "KT Mahe",
@@ -1496,7 +1496,7 @@
     },
     {
         "Title": "One Flew Over the Cuckoo's Nest",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Alexander Walker",
@@ -1602,7 +1602,7 @@
     },
     {
         "Title": "Seven",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jay Carr",
@@ -1708,7 +1708,7 @@
     },
     {
         "Title": "Interstellar",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Akhil Arora",
@@ -1814,7 +1814,7 @@
     },
     {
         "Title": "It's a Wonderful Life",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Chris Stuckmann",
@@ -1865,12 +1865,12 @@
     },
     {
         "Title": "Seven Samurai",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Silence of the Lambs",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -1976,7 +1976,7 @@
     },
     {
         "Title": "Saving Private Ryan",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -2082,7 +2082,7 @@
     },
     {
         "Title": "City of God",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Anupama Chopra",
@@ -2128,12 +2128,12 @@
     },
     {
         "Title": "Life Is Beautiful",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Green Mile",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Matt Brunson",
@@ -2194,7 +2194,7 @@
     },
     {
         "Title": "Terminator 2: Judgment Day",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Bill Cosford",
@@ -2300,12 +2300,12 @@
     },
     {
         "Title": "Star Wars: Episode IV - A New Hope",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Back to the Future",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -2411,7 +2411,7 @@
     },
     {
         "Title": "Spirited Away",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Sukhdev Sandhu",
@@ -2517,17 +2517,17 @@
     },
     {
         "Title": "The Pianist",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Parasite",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Psycho",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -2633,12 +2633,12 @@
     },
     {
         "Title": "Spider-Man: Across the Spider-Verse",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Gladiator",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Stephen Hunter",
@@ -2744,7 +2744,7 @@
     },
     {
         "Title": "The Lion King",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Hugo Davenport",
@@ -2850,12 +2850,12 @@
     },
     {
         "Title": "Leon",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Departed",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Allison Rose",
@@ -2961,7 +2961,7 @@
     },
     {
         "Title": "American History X",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Edelstein",
@@ -3067,17 +3067,17 @@
     },
     {
         "Title": "Whiplash",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Prestige",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Grave of the Fireflies",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Adam Kempenaar",
@@ -3123,7 +3123,7 @@
     },
     {
         "Title": "Harakiri",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wael Khairy",
@@ -3144,22 +3144,22 @@
     },
     {
         "Title": "The Usual Suspects",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Casablanca",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Untouchable",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Cinema Paradiso",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Tim Pulleine",
@@ -3265,7 +3265,7 @@
     },
     {
         "Title": "Modern Times",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ella H. McCormick",
@@ -3371,7 +3371,7 @@
     },
     {
         "Title": "Rear Window",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Erick Estrada",
@@ -3477,7 +3477,7 @@
     },
     {
         "Title": "Once Upon a Time in the West",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "TIME Staff",
@@ -3573,7 +3573,7 @@
     },
     {
         "Title": "Alien",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jack Kroll",
@@ -3679,7 +3679,7 @@
     },
     {
         "Title": "City Lights",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Chris Stuckmann",
@@ -3740,7 +3740,7 @@
     },
     {
         "Title": "Apocalypse Now",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ed Potton",
@@ -3821,7 +3821,7 @@
     },
     {
         "Title": "Django Unchained",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Don Shanahan",
@@ -3927,7 +3927,7 @@
     },
     {
         "Title": "Memento",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Victoria Luxford",
@@ -4033,7 +4033,7 @@
     },
     {
         "Title": "12th Fail",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Shubhra Gupta",
@@ -4049,12 +4049,12 @@
     },
     {
         "Title": "WALL\u00b7E",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Raiders of the Lost Ark",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Vincent Canby",
@@ -4160,7 +4160,7 @@
     },
     {
         "Title": "The Lives of Others",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Shubhra Gupta",
@@ -4201,12 +4201,12 @@
     },
     {
         "Title": "Sunset Blvd.",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Paths of Glory",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kevin Maher",
@@ -4312,7 +4312,7 @@
     },
     {
         "Title": "Avengers: Infinity War",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ben Sachs",
@@ -4418,12 +4418,12 @@
     },
     {
         "Title": "Spider-Man: Into the Spider-Verse",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Witness for the Prosecution",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Clayton Dillard",
@@ -4459,22 +4459,22 @@
     },
     {
         "Title": "The Shining",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Great Dictator",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Aliens",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Inglourious Basterds",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jennifer K. Stuller",
@@ -4580,7 +4580,7 @@
     },
     {
         "Title": "The Dark Knight Rises",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "J. Hoberman",
@@ -4686,12 +4686,12 @@
     },
     {
         "Title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "American Beauty",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Paul Clinton (CNN.com)",
@@ -4797,7 +4797,7 @@
     },
     {
         "Title": "Oldboy",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Sims",
@@ -4828,12 +4828,12 @@
     },
     {
         "Title": "Coco",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Amadeus",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jay Scott",
@@ -4939,7 +4939,7 @@
     },
     {
         "Title": "Toy Story",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Denby",
@@ -5045,7 +5045,7 @@
     },
     {
         "Title": "Das Boot",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wael Khairy",
@@ -5141,12 +5141,12 @@
     },
     {
         "Title": "Braveheart",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Avengers: Endgame",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Victoria Luxford",
@@ -5252,12 +5252,12 @@
     },
     {
         "Title": "Joker",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Princess Mononoke",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jack Mathews",
@@ -5363,7 +5363,7 @@
     },
     {
         "Title": "Good Will Hunting",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Bill Boisvert",
@@ -5469,12 +5469,12 @@
     },
     {
         "Title": "Your Name.",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Once Upon a Time in America",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -5530,7 +5530,7 @@
     },
     {
         "Title": "High and Low",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "A.O. Scott",
@@ -5551,7 +5551,7 @@
     },
     {
         "Title": "3 Idiots",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -5587,7 +5587,7 @@
     },
     {
         "Title": "Singin' in the Rain",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Sara Michelle Fetters",
@@ -5693,7 +5693,7 @@
     },
     {
         "Title": "Capernaum",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Nell Minow",
@@ -5799,12 +5799,12 @@
     },
     {
         "Title": "Oppenheimer",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Requiem for a Dream",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Candice Frederick",
@@ -5830,7 +5830,7 @@
     },
     {
         "Title": "Come and See",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Mark Le Fanu",
@@ -5936,7 +5936,7 @@
     },
     {
         "Title": "Toy Story 3",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "John Anderson",
@@ -6042,12 +6042,12 @@
     },
     {
         "Title": "Star Wars: Episode VI - Return of the Jedi",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Eternal Sunshine of the Spotless Mind",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Adam Kempenaar",
@@ -6153,12 +6153,12 @@
     },
     {
         "Title": "The Hunt",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "2001: A Space Odyssey",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Charles Champlin",
@@ -6219,7 +6219,7 @@
     },
     {
         "Title": "Reservoir Dogs",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ella Taylor",
@@ -6325,7 +6325,7 @@
     },
     {
         "Title": "Ikiru",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Keith Uhlich",
@@ -6366,7 +6366,7 @@
     },
     {
         "Title": "Lawrence of Arabia",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Marjory Adams",
@@ -6472,7 +6472,7 @@
     },
     {
         "Title": "The Apartment",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Rachel Wagner",
@@ -6578,7 +6578,7 @@
     },
     {
         "Title": "North by Northwest",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Roger Moore",
@@ -6684,7 +6684,7 @@
     },
     {
         "Title": "Citizen Kane",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -6790,7 +6790,7 @@
     },
     {
         "Title": "Incendies",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Roger Clarke",
@@ -6896,7 +6896,7 @@
     },
     {
         "Title": "Vertigo",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Adam Kempenaar",
@@ -6932,12 +6932,12 @@
     },
     {
         "Title": "M",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Double Indemnity",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -7043,7 +7043,7 @@
     },
     {
         "Title": "Scarface",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Eleanor Ringel Cater",
@@ -7144,12 +7144,12 @@
     },
     {
         "Title": "Am\u00e9lie",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Full Metal Jacket",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -7255,17 +7255,17 @@
     },
     {
         "Title": "Heat",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "A Clockwork Orange",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Up",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Tom Charity",
@@ -7371,7 +7371,7 @@
     },
     {
         "Title": "To Kill a Mockingbird",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kate Muir",
@@ -7387,17 +7387,17 @@
     },
     {
         "Title": "The Sting",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "A Separation",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Indiana Jones and the Last Crusade",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Roger Ebert",
@@ -7503,7 +7503,7 @@
     },
     {
         "Title": "Die Hard",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Nick Schager",
@@ -7609,12 +7609,12 @@
     },
     {
         "Title": "Metropolis",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Like Stars on Earth",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Shubhra Gupta",
@@ -7645,7 +7645,7 @@
     },
     {
         "Title": "Snatch",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -7726,17 +7726,17 @@
     },
     {
         "Title": "Hamilton",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "L.A. Confidential",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Bicycle Thieves",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Richard Winnington",
@@ -7842,12 +7842,12 @@
     },
     {
         "Title": "1917",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Taxi Driver",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Desmond Ryan",
@@ -7953,7 +7953,7 @@
     },
     {
         "Title": "Downfall",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Ansen",
@@ -7964,7 +7964,7 @@
     },
     {
         "Title": "Dangal",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Anupama Chopra",
@@ -7990,7 +7990,7 @@
     },
     {
         "Title": "For a Few Dollars More",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -8036,7 +8036,7 @@
     },
     {
         "Title": "Batman Begins",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -8117,7 +8117,7 @@
     },
     {
         "Title": "The Wolf of Wall Street",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Mordaunt Hall",
@@ -8138,7 +8138,7 @@
     },
     {
         "Title": "Some Like It Hot",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "James Jackson",
@@ -8244,7 +8244,7 @@
     },
     {
         "Title": "Green Book",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ben Sachs",
@@ -8350,7 +8350,7 @@
     },
     {
         "Title": "The Kid",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Rachel Wagner",
@@ -8376,12 +8376,12 @@
     },
     {
         "Title": "The Father",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Judgment at Nuremberg",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Victor Pineyro",
@@ -8432,17 +8432,17 @@
     },
     {
         "Title": "All About Eve",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Truman Show",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Top Gun: Maverick",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Larushka Ivan-Zadeh",
@@ -8548,12 +8548,12 @@
     },
     {
         "Title": "Shutter Island",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "There Will Be Blood",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -8659,12 +8659,12 @@
     },
     {
         "Title": "Casino",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Ran",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Robinson",
@@ -8770,7 +8770,7 @@
     },
     {
         "Title": "Jurassic Park",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Peter Bradshaw",
@@ -8876,12 +8876,12 @@
     },
     {
         "Title": "The Sixth Sense",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Pan's Labyrinth",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Nigel Andrews",
@@ -8987,12 +8987,12 @@
     },
     {
         "Title": "Unforgiven",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "No Country for Old Men",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -9098,7 +9098,7 @@
     },
     {
         "Title": "A Beautiful Mind",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Mark Johnson",
@@ -9204,22 +9204,22 @@
     },
     {
         "Title": "The Thing",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Treasure of the Sierra Madre",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Kill Bill: Vol. 1",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Yojimbo",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Parkinson",
@@ -9230,7 +9230,7 @@
     },
     {
         "Title": "Monty Python and the Holy Grail",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Donald Clarke",
@@ -9336,7 +9336,7 @@
     },
     {
         "Title": "The Great Escape",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -9357,7 +9357,7 @@
     },
     {
         "Title": "Finding Nemo",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -9463,7 +9463,7 @@
     },
     {
         "Title": "Rashomon",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kevin Maher",
@@ -9499,12 +9499,12 @@
     },
     {
         "Title": "Prisoners",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Howl's Moving Castle",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Ansen",
@@ -9610,12 +9610,12 @@
     },
     {
         "Title": "The Elephant Man",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Chinatown",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Charles Champlin",
@@ -9721,7 +9721,7 @@
     },
     {
         "Title": "Dial M for Murder",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Derwent May",
@@ -9762,7 +9762,7 @@
     },
     {
         "Title": "Gone with the Wind",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "SMH Staff",
@@ -9868,7 +9868,7 @@
     },
     {
         "Title": "V for Vendetta",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -9974,7 +9974,7 @@
     },
     {
         "Title": "Lock, Stock and Two Smoking Barrels",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Lisa Kennedy",
@@ -10080,7 +10080,7 @@
     },
     {
         "Title": "The Secret in Their Eyes",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Brian Eggert",
@@ -10186,12 +10186,12 @@
     },
     {
         "Title": "Inside Out",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Raging Bull",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Dean Johnson",
@@ -10297,7 +10297,7 @@
     },
     {
         "Title": "Three Billboards Outside Ebbing, Missouri",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Elissa Suh",
@@ -10403,7 +10403,7 @@
     },
     {
         "Title": "Trainspotting",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Chris Cabin",
@@ -10474,17 +10474,17 @@
     },
     {
         "Title": "The Bridge on the River Kwai",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Spider-Man: No Way Home",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Fargo",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kevin Maher",
@@ -10590,7 +10590,7 @@
     },
     {
         "Title": "Klaus",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Richard Roeper",
@@ -10676,12 +10676,12 @@
     },
     {
         "Title": "Warrior",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Catch Me If You Can",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -10787,7 +10787,7 @@
     },
     {
         "Title": "Godzilla Minus One",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Sims",
@@ -10893,7 +10893,7 @@
     },
     {
         "Title": "Gran Torino",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Deborah Ross",
@@ -10999,12 +10999,12 @@
     },
     {
         "Title": "My Neighbour Totoro",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Million Dollar Baby",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -11110,7 +11110,7 @@
     },
     {
         "Title": "Harry Potter and the Deathly Hallows: Part 2",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kate Muir",
@@ -11216,7 +11216,7 @@
     },
     {
         "Title": "Children of Heaven",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Owen Gleiberman",
@@ -11227,7 +11227,7 @@
     },
     {
         "Title": "12 Years a Slave",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Nijla Mu'min",
@@ -11333,7 +11333,7 @@
     },
     {
         "Title": "Blade Runner",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -11439,7 +11439,7 @@
     },
     {
         "Title": "Before Sunrise",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Anthony Lane",
@@ -11460,12 +11460,12 @@
     },
     {
         "Title": "Ben-Hur",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Grand Budapest Hotel",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Edward Porter",
@@ -11571,7 +11571,7 @@
     },
     {
         "Title": "Barry Lyndon",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -11677,7 +11677,7 @@
     },
     {
         "Title": "Gone Girl",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Olivia Luder",
@@ -11783,7 +11783,7 @@
     },
     {
         "Title": "Hacksaw Ridge",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -11889,7 +11889,7 @@
     },
     {
         "Title": "The Gold Rush",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Edwin Schallert",
@@ -11975,12 +11975,12 @@
     },
     {
         "Title": "Memories of Murder",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "In the Name of the Father",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Ansen",
@@ -12086,7 +12086,7 @@
     },
     {
         "Title": "Dead Poets Society",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kurt Jacobsen",
@@ -12132,7 +12132,7 @@
     },
     {
         "Title": "On the Waterfront",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Ed Potton",
@@ -12238,12 +12238,12 @@
     },
     {
         "Title": "The General",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Deer Hunter",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Wendy Ide",
@@ -12349,7 +12349,7 @@
     },
     {
         "Title": "Wild Tales",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Dwight Brown",
@@ -12455,7 +12455,7 @@
     },
     {
         "Title": "Mad Max: Fury Road",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Hannah Hodson",
@@ -12561,17 +12561,17 @@
     },
     {
         "Title": "Monsters, Inc.",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Sherlock Jr.",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Third Man",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Richard L. Coe",
@@ -12677,7 +12677,7 @@
     },
     {
         "Title": "Wild Strawberries",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Parkinson",
@@ -12728,12 +12728,12 @@
     },
     {
         "Title": "The Wages of Fear",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Jaws",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Adam Nayman",
@@ -12819,7 +12819,7 @@
     },
     {
         "Title": "How to Train Your Dragon",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Derek Malcolm",
@@ -12925,17 +12925,17 @@
     },
     {
         "Title": "Mary and Max",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Mr. Smith Goes to Washington",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Ratatouille",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Anupama Chopra",
@@ -13041,12 +13041,12 @@
     },
     {
         "Title": "Le Mans '66",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Big Lebowski",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jonathan Romney",
@@ -13152,12 +13152,12 @@
     },
     {
         "Title": "Room",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Tokyo Story",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Penelope Gilliatt",
@@ -13198,27 +13198,27 @@
     },
     {
         "Title": "The Seventh Seal",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Rocky",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Logan",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Spotlight",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Hotel Rwanda",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Ansen",
@@ -13229,7 +13229,7 @@
     },
     {
         "Title": "Platoon",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Denby",
@@ -13335,7 +13335,7 @@
     },
     {
         "Title": "The Terminator",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Brian Eggert",
@@ -13441,12 +13441,12 @@
     },
     {
         "Title": "The Passion of Joan of Arc",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Before Sunset",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Christy Lemire",
@@ -13477,7 +13477,7 @@
     },
     {
         "Title": "La haine",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Jonathan Rosenbaum",
@@ -13583,12 +13583,12 @@
     },
     {
         "Title": "The Best Years of Our Lives",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Exorcist",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Dennis Harvey",
@@ -13694,7 +13694,7 @@
     },
     {
         "Title": "Pirates of the Caribbean: The Curse of the Black Pearl",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Namrata Joshi",
@@ -13715,17 +13715,17 @@
     },
     {
         "Title": "Rush",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Jai Bhim",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "Network",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -13806,17 +13806,17 @@
     },
     {
         "Title": "Stand by Me",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Wizard of Oz",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Incredibles",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Stratton",
@@ -13837,7 +13837,7 @@
     },
     {
         "Title": "Hachi: A Dog's Tale",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Alissa Simon",
@@ -13898,7 +13898,7 @@
     },
     {
         "Title": "The Handmaiden",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Li Sian Goh",
@@ -14004,7 +14004,7 @@
     },
     {
         "Title": "Into the Wild",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "David Fear",
@@ -14110,17 +14110,17 @@
     },
     {
         "Title": "My Father and My Son",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Sound of Music",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "To Be or Not to Be",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Michael Blowen",
@@ -14196,12 +14196,12 @@
     },
     {
         "Title": "The Grapes of Wrath",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": []
     },
     {
         "Title": "The Battle of Algiers",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -14252,7 +14252,7 @@
     },
     {
         "Title": "Groundhog Day",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Richard Roeper",
@@ -14358,7 +14358,7 @@
     },
     {
         "Title": "Amores perros",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Joe Morgenstern",
@@ -14464,7 +14464,7 @@
     },
     {
         "Title": "Rebecca",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Roxana Hadadi",
@@ -14570,7 +14570,7 @@
     },
     {
         "Title": "Cool Hand Luke",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "John Mahoney",
@@ -14601,7 +14601,7 @@
     },
     {
         "Title": "The Iron Giant",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Sean Axmaker",
@@ -14707,7 +14707,7 @@
     },
     {
         "Title": "The Help",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Shubhra Gupta",
@@ -14813,7 +14813,7 @@
     },
     {
         "Title": "It Happened One Night",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kevin Maher",
@@ -14919,7 +14919,7 @@
     },
     {
         "Title": "Aladdin",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Christy Lemire",
@@ -15025,7 +15025,7 @@
     },
     {
         "Title": "Dances with Wolves",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Pauline Kael",
@@ -15131,7 +15131,7 @@
     },
     {
         "Title": "Paris, Texas",
-        "Metacritic": NaN,
+        "Metacritic": [],
         "RottenTomatoes": [
             [
                 "Kevin Maher",
