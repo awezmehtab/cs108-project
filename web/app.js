@@ -159,7 +159,9 @@ function searchSuggest(movieEntered, movieData) {
     for(let i = 0; i < titles.length; i++) {
         searchSuggestionsDict[titles[i]] = distances[i];
     }
-    console.log('searchSuggestions: ', searchSuggestionsDict);
+    // Convert the dictionary to an array of tuples, then sort by the second element of each tuple (the distance)
+    let sortedSearchSuggestions = Object.entries(searchSuggestionsDict).sort((a, b) => a[1] - b[1]);
+    console.log('sortedSearchSuggestions: ', sortedSearchSuggestions);
 
     return searchSuggestions;
 }
