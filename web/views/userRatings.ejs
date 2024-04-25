@@ -14,10 +14,22 @@
     
     <h1>Reviews</h1>
     <form action="/userRatings?username=<%=username%>" method="post">
-        <input type="text" name="movieName" placeholder="Enter Movie Name">
-        <input type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10">
+        <input type="text" name="movieName" placeholder="Enter Movie Name" required>
+        <input type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10" required>
         <button type="submit">Submit</button>
     </form>
+    
+    <!--wrong movie name-->
+    <% if (typeof warning === 'object') { %>
+        <div id="search-suggest">
+            Did you mean: 
+            <ul>
+                <% for(let i=0; i<warning.length; i++) { %>
+                    <li><%=warning[i].Title%></li>
+                <% } %>
+            </ul>
+        </div>
+    <% } %>
 
     <% if(ratings.length > 0) { %>
         <ul>
@@ -26,13 +38,6 @@
                 <li><%= ratedMovies[i].Title %> : <%= ratings[i] %></li>
             <% } %>
         </ul>
-    <% } %>
-
-
-    <% if(warning == 1) { %>
-        <div class="alert">
-            <strong>Movie Not Found</strong>
-        </div>
     <% } %>
 
     <% if(warning == 2) { %>

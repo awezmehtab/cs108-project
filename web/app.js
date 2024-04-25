@@ -133,6 +133,7 @@ function suggestingMovies(userRatedMovies, userRatings, movieData){
      return suggestedMovies;
 }
 
+// my function to calculate similarity between two words    
 function my_distance(word1, word2) {
     if (word1.length < word2.length){
         let distances = [];
@@ -151,17 +152,6 @@ function searchSuggest(movieEntered, movieData) {
     let sortedMovieData = [...movieData];
     sortedMovieData.sort((a, b) => my_distance(movieEntered, a.Title.toLowerCase()) - my_distance(movieEntered, b.Title.toLowerCase()));
     searchSuggestions = sortedMovieData.slice(0, 5);
-
-    // just for CONSOLE LOG
-    let titles = sortedMovieData.slice(0,20).map(x => x.Title);
-    let distances = sortedMovieData.slice(0,20).map(x => my_distance(movieEntered, x.Title));
-    let searchSuggestionsDict = {};
-    for(let i = 0; i < titles.length; i++) {
-        searchSuggestionsDict[titles[i]] = distances[i];
-    }
-    // Convert the dictionary to an array of tuples, then sort by the second element of each tuple (the distance)
-    let sortedSearchSuggestions = Object.entries(searchSuggestionsDict).sort((a, b) => a[1] - b[1]);
-    console.log('sortedSearchSuggestions: ', sortedSearchSuggestions);
 
     return searchSuggestions;
 }
@@ -340,9 +330,8 @@ app.post('/ratings', (req, res) => {
         };
     }
     else {
-        warning = 1; // 1 represents movie not found
+        warning = searchSuggest(movieName, movieData); // 1 represents movie not found
     };
-
 
     // now let's get suggested movies data
     suggestedMovies = suggestingMovies(ratedMovies, ratings, movieData);
@@ -516,8 +505,7 @@ app.post('/userRatings', (req, res) => {
             }
         }
         else {
-            warning = 1; // 1 represents movie not found
-
+            warning = searchSuggest(movieName, movieData); // 1 represents movie not found
             // now let's get suggested movies data
             suggestedMovies = suggestingMovies(userRatedMovies, userRatings, movieData);
             res.render('userRatings', { ratedMovies: userRatedMovies, ratings: userRatings, warning: warning, suggestedMovies: suggestedMovies, username: username});

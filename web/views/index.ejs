@@ -68,7 +68,7 @@
             <h2>Did you mean these?</h2>
             <ul>
                 <% for(let i=0; i<searchSuggestions.length; i++) { %>
-                    <li><a style="color: blue;" href="/submit?movieName=<%= searchSuggestions[i].Title %>"><%= searchSuggestions[i].Title %></a></li>
+                    <li><a style="color: blue;" href="/submit?movieName=<%= searchSuggestions[i].Title %>&username=<%=username%>"><%= searchSuggestions[i].Title %></a></li>
                 <% } %>
             </ul>
         <% } %>
