@@ -23,7 +23,7 @@
         </form>
 
         <!-- displaying movie info -->
-        <%if(movies.length > 0 && movies[movies.length-1] != undefined){ %>
+        <%if(movies.length > 0 && movies[movies.length-1].Title != 'Movie Not Found'){ %>
             <ul>
                 <h2>Movie Info:</h2>
                 <% currentMovie = movies[movies.length -1] %>
@@ -64,8 +64,13 @@
                 <img id="Image" width="200px" src="<%= currentMovie.Image %>" alt="Movie Image">
             <% } %>
         <% } else if (movies.length == 0) { %>
-        <% } else { %>
-            <li>Sorry, We couldn't find the movie</li>
+        <% } else if (searchSuggestions.length > 0) { %>
+            <h2>Did you mean these?</h2>
+            <ul>
+                <% for(let i=0; i<searchSuggestions.length; i++) { %>
+                    <li><a style="color: blue;" href="/submit?movieName=<%= searchSuggestions[i].Title %>"><%= searchSuggestions[i].Title %></a></li>
+                <% } %>
+            </ul>
         <% } %>
 
     </body>

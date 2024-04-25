@@ -2,6 +2,7 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const { distance, closest } = require('fastest-levenshtein');
 
 // creating an express "app"
 const app = express();
@@ -132,17 +133,49 @@ function suggestingMovies(userRatedMovies, userRatings, movieData){
      return suggestedMovies;
 }
 
-// requesting / (get)
+function my_distance(word1, word2) {
+    if (word1 < word2){
+        let distances = [];
+        for(let i = 0; i < word1.length + 1; i++) {
+            distances[i] = distance(word1, word2.slice(i, word1.length + i));
+        }
+       return Math.min(...distances);
+    }
+    else {
+        return distance(word1, word2);
+    }
+}
+
+function searchSuggest(movieEntered, movieData) {
+    searchSuggestions = [];
+    let sortedMovieData = [...movieData];
+    sortedMovieData.sort((a, b) => my_distance(movieEntered, a.Title.toLowerCase()) - my_distance(movieEntered, b.Title.toLowerCase()));
+    searchSuggestions = sortedMovieData.slice(0, 5);
+
+    // just for CONSOLE LOG
+    let titles = sortedMovieData.slice(0,20).map(x => x.Title);
+    let distances = sortedMovieData.slice(0,20).map(x => my_distance(movieEntered, x.Title));
+    let searchSuggestionsDict = {};
+    for(let i = 0; i < titles.length; i++) {
+        searchSuggestionsDict[titles[i]] = distances[i];
+    }
+    console.log('searchSuggestions: ', searchSuggestionsDict);
+
+    return searchSuggestions;
+}
+
+// requesting / (GET)
 app.get('/', (req, res) => {
     const username = req.query.username ? req.query.username : '';
+    searchSuggestions = [];
 
-    // also giving rating by our users
+    // RATING from our USERS
     fs.readFile('users.json', 'utf8', (err, data) => {
         if(err) {
             console.log('Somethings wrong in reading users.json: ', err);
         }
         // if there are movies searched
-        if (movies.length > 0 && movies[movies.length - 1]) {
+        if (movies.length > 0 && movies[movies.length - 1].Title !== 'Movie Not Found') {
             const myMovie = movies[movies.length - 1];
             let totalRating = 0;
             let totalCount = 0;
@@ -151,7 +184,6 @@ app.get('/', (req, res) => {
             if(data) {
                 data = JSON.parse(data);
                 data.forEach((user, index, array) => {
-                    console.log('user.ratedMovies: ', user.ratedMovies)
                     const myIndex = user.ratedMovies.findIndex(ratedMovie => ratedMovie.Title.toLowerCase() === myMovie.Title.toLowerCase());
                     if(myIndex !== -1) {
                         totalRating += Number(user.ratings[myIndex]);
@@ -168,19 +200,69 @@ app.get('/', (req, res) => {
                 userRating = '';
             }
         }
+        // if the last movie searched is 'Movie Not Found', then we need to send search suggestions.
         else {
+            if(movies.length > 0 && movies[movies.length - 1].Title === 'Movie Not Found') {
+                searchSuggestions = [];
+                const movieEntered = movies[movies.length - 1].Name;
+                searchSuggestions = searchSuggest(movieEntered, movieData);
+            }
             userRating = '';
         }
-        res.render('index', { movies: movies, username: username, userRating: userRating})
+        res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions});
     });  
 
 //  res.render('index', { movies: movies, username: username, userReviews: userReviews});
 });
 
+// GET request to /submit
+app.get('/submit', (req, res) => {
+    const movieEntered = req.query.movieName
+    // reading imdb.json
+    fs.readFile('imdb.json', 'utf8', (err, data) => {
+        if(err) {
+            console.log(err);
+        }
+        try {
+            const imdb_data = JSON.parse(data);
+            // movieData contains arrays in string form, let's parse it first then push it to movies array
+            const movieDataFound = imdb_data.find((m, index, array) => movieEntered.toLowerCase() === m.Title.toLowerCase());
+
+            // no need to check if something's wrong, i kept it in ejs file
+            if(movieDataFound) {
+                movieDataFound.Casts = movieDataFound.Casts.replace(/'/g, '\"');
+                movieDataFound.Casts = JSON.parse(movieDataFound.Casts);
+                movieDataFound.Directors = movieDataFound.Directors.replace(/'/g, '\"');
+                movieDataFound.Directors = JSON.parse(movieDataFound.Directors);
+                movieDataFound.Other_Ratings = movieDataFound.Other_Ratings.replace(/'/g, '\"');
+                movieDataFound.Other_Ratings = JSON.parse(movieDataFound.Other_Ratings);
+                movieDataFound.Genres = movieDataFound.Genres.replace(/'/g, '\"');
+                movieDataFound.Genres = JSON.parse(movieDataFound.Genres);
+                movieDataFound.Streaming_Platforms = movieDataFound.Streaming_Platforms.replace(/'/g, '\"');
+                movieDataFound.Streaming_Platforms = JSON.parse(movieDataFound.Streaming_Platforms);
+                movies.push(movieDataFound);
+            }
+            else {
+                movies.push({Title: 'Movie Not Found', Name: movieEntered, Genres: [], Directors: [], Casts: [], Other_Ratings: [], Streaming_Platforms: []});
+            }
+            console.log('we\'ve pushed this movie: ', `${movies[movies.length - 1].Title}, ${movies[movies.length - 1].Name}` ? `${movies[movies.length - 1].Title}, ${movies[movies.length - 1].Name}` : 'Movie Not Found');
+
+            if(req.query.username) {
+                res.redirect('/?username=' + req.query.username);
+            } else {
+                res.redirect('/');
+            } 
+        }
+        catch(err) {
+            console.log('Sorry, something\'s wrong:', err)
+        }
+    });
+})
+
 // when submitted (searched), /submit, is used for post request
 app.post('/submit', (req, res) => {
     //response received
-    const movieEntered = req.body.movieName;
+    let movieEntered = req.body.movieName;
 
     // reading imdb.json
     fs.readFile('imdb.json', 'utf8', (err, data) => {
@@ -204,9 +286,12 @@ app.post('/submit', (req, res) => {
                 movieDataFound.Genres = JSON.parse(movieDataFound.Genres);
                 movieDataFound.Streaming_Platforms = movieDataFound.Streaming_Platforms.replace(/'/g, '\"');
                 movieDataFound.Streaming_Platforms = JSON.parse(movieDataFound.Streaming_Platforms);
+                movies.push(movieDataFound);
             }
-
-            movies.push(movieDataFound);
+            else {
+                movies.push({Title: 'Movie Not Found', Name: movieEntered, Genres: [], Directors: [], Casts: [], Other_Ratings: [], Streaming_Platforms: []});
+            }
+            console.log('we\'ve pushed this movie: ', movies[movies.length - 1].Title);
 
             if(req.query.username) {
                 res.redirect('/?username=' + req.query.username);

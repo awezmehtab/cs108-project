@@ -331,5 +331,51 @@
         "password": "3",
         "ratedMovies": [],
         "ratings": []
+    },
+    {
+        "username": "real_user",
+        "password": "123",
+        "ratedMovies": [
+            {
+                "Title": "12th Fail",
+                "Image": "https://m.media-amazon.com/images/M/MV5BOTJlY2U2ZmYtMzU3Ny00ZDI3LWEwMDYtOWIxNzdhZDI5ZWRkXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_QL75_UY107_CR5,0,72,107_.jpg",
+                "Year_Released": "2023",
+                "Duration": "2h 27min",
+                "Age_Rating": "12A",
+                "Genres": [
+                    "Biography",
+                    "Drama"
+                ],
+                "Rating": "9.0",
+                "Plots": "The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.",
+                "Directors": "['Vidhu Vinod Chopra']",
+                "Casts": "['Vikrant Massey', 'Medha Shankr', 'Anant Joshi']",
+                "Trailer_Links": "https://www.imdb.com/video/vi1088210713/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['Hotstar'], ['https://www.hotstar.com/']]",
+                "Other_Ratings": "[['9/10', '4/5', '91%'], ['IMDb', 'Times of India', 'Rotten Tomatoes'], ['https://www.imdb.com/title/tt23849204/', 'https://m.timesofindia.com/entertainment/hindi/movie-reviews/12th-fail/movie-review/104698543.cms', 'https://www.rottentomatoes.com/m/12th_fail']]"
+            },
+            {
+                "Title": "The Godfather",
+                "Image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY107_CR1,0,72,107_.jpg",
+                "Year_Released": "1972",
+                "Duration": "2h 55min",
+                "Age_Rating": "15",
+                "Genres": [
+                    "Crime",
+                    "Drama"
+                ],
+                "Rating": "9.2",
+                "Plots": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+                "Directors": "['Francis Ford Coppola']",
+                "Casts": "['Marlon Brando', 'Al Pacino', 'James Caan']",
+                "Trailer_Links": "https://www.imdb.com/video/vi1629995801/?ref_=chttp_tp_vp",
+                "Streaming_Platforms": "[['Prime Video', 'Prime Video'], ['https://www.primevideo.com/detail/amzn1.dv.gti.953ee84f-7eb0-402b-812a-14986835deb6', 'https://www.primevideo.com/detail/amzn1.dv.gti.953ee84f-7eb0-402b-812a-14986835deb6']]",
+                "Other_Ratings": "[['9.2/10', '97%', '5/5'], ['IMDb', 'Rotten Tomatoes', 'Empire'], ['https://www.imdb.com/title/tt0068646/', 'https://www.rottentomatoes.com/m/the_godfather', 'https://www.empireonline.com/movies/reviews/godfather-review/']]"
+            }
+        ],
+        "ratings": [
+            "3",
+            "10"
+        ]
     }
 ]
