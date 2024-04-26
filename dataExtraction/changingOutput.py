@@ -17,7 +17,7 @@ for movieReviewed in reviews:
         for movie in movieData:
             if(movie['Title'] == movieReviewed['Title']):
                 print(movie['Title'].strip())
-                directors = json.loads(movie['Directors'].replace("\"", "\'"))
+                directors = json.loads(movie['Directors'])
                 break
         search_str = f'{movie["Title"]} {directors[0]}'.strip().replace(' ', '%20').replace(':', '%3A').replace(',', '%2C').replace("'", '%27')
         search_url = f'https://www.rottentomatoes.com/search?search={search_str}'
