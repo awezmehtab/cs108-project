@@ -1,0 +1,115 @@
+Message: no such element: Unable to locate element: {"method":"css selector","selector":"div#critics-consensus a"}
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x59204e04ef33 <unknown>
+#1 0x59204dd46ce6 <unknown>
+#2 0x59204dd91e48 <unknown>
+#3 0x59204dd91f01 <unknown>
+#4 0x59204ddd53f4 <unknown>
+#5 0x59204ddb3edd <unknown>
+#6 0x59204ddd2899 <unknown>
+#7 0x59204ddb3c53 <unknown>
+#8 0x59204dd84db3 <unknown>
+#9 0x59204dd8577e <unknown>
+#10 0x59204e01486b <unknown>
+#11 0x59204e018885 <unknown>
+#12 0x59204e002181 <unknown>
+#13 0x59204e019412 <unknown>
+#14 0x59204dfe625f <unknown>
+#15 0x59204e03d528 <unknown>
+#16 0x59204e03d723 <unknown>
+#17 0x59204e04e0e4 <unknown>
+#18 0x7f5db9094ac3 <unknown>
+
+Message: no such element: Unable to locate element: {"method":"css selector","selector":"div#critics-consensus a"}
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x59204e04ef33 <unknown>
+#1 0x59204dd46ce6 <unknown>
+#2 0x59204dd91e48 <unknown>
+#3 0x59204dd91f01 <unknown>
+#4 0x59204ddd53f4 <unknown>
+#5 0x59204ddb3edd <unknown>
+#6 0x59204ddd2899 <unknown>
+#7 0x59204ddb3c53 <unknown>
+#8 0x59204dd84db3 <unknown>
+#9 0x59204dd8577e <unknown>
+#10 0x59204e01486b <unknown>
+#11 0x59204e018885 <unknown>
+#12 0x59204e002181 <unknown>
+#13 0x59204e019412 <unknown>
+#14 0x59204dfe625f <unknown>
+#15 0x59204e03d528 <unknown>
+#16 0x59204e03d723 <unknown>
+#17 0x59204e04e0e4 <unknown>
+#18 0x7f5db9094ac3 <unknown>
+
+Message: no such element: Unable to locate element: {"method":"css selector","selector":"div#critics-consensus a"}
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x59204e04ef33 <unknown>
+#1 0x59204dd46ce6 <unknown>
+#2 0x59204dd91e48 <unknown>
+#3 0x59204dd91f01 <unknown>
+#4 0x59204ddd53f4 <unknown>
+#5 0x59204ddb3edd <unknown>
+#6 0x59204ddd2899 <unknown>
+#7 0x59204ddb3c53 <unknown>
+#8 0x59204dd84db3 <unknown>
+#9 0x59204dd8577e <unknown>
+#10 0x59204e01486b <unknown>
+#11 0x59204e018885 <unknown>
+#12 0x59204e002181 <unknown>
+#13 0x59204e019412 <unknown>
+#14 0x59204dfe625f <unknown>
+#15 0x59204e03d528 <unknown>
+#16 0x59204e03d723 <unknown>
+#17 0x59204e04e0e4 <unknown>
+#18 0x7f5db9094ac3 <unknown>
+
+Message: no such element: Unable to locate element: {"method":"css selector","selector":"div#critics-consensus a"}
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x59204e04ef33 <unknown>
+#1 0x59204dd46ce6 <unknown>
+#2 0x59204dd91e48 <unknown>
+#3 0x59204dd91f01 <unknown>
+#4 0x59204ddd53f4 <unknown>
+#5 0x59204ddb3edd <unknown>
+#6 0x59204ddd2899 <unknown>
+#7 0x59204ddb3c53 <unknown>
+#8 0x59204dd84db3 <unknown>
+#9 0x59204dd8577e <unknown>
+#10 0x59204e01486b <unknown>
+#11 0x59204e018885 <unknown>
+#12 0x59204e002181 <unknown>
+#13 0x59204e019412 <unknown>
+#14 0x59204dfe625f <unknown>
+#15 0x59204e03d528 <unknown>
+#16 0x59204e03d723 <unknown>
+#17 0x59204e04e0e4 <unknown>
+#18 0x7f5db9094ac3 <unknown>
+
+Message: no such element: Unable to locate element: {"method":"css selector","selector":"div#critics-consensus a"}
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x59204e04ef33 <unknown>
+#1 0x59204dd46ce6 <unknown>
+#2 0x59204dd91e48 <unknown>
+#3 0x59204dd91f01 <unknown>
+#4 0x59204ddd53f4 <unknown>
+#5 0x59204ddb3edd <unknown>
+#6 0x59204ddd2899 <unknown>
+#7 0x59204ddb3c53 <unknown>
+#8 0x59204dd84db3 <unknown>
+#9 0x59204dd8577e <unknown>
+#10 0x59204e01486b <unknown>
+#11 0x59204e018885 <unknown>
+#12 0x59204e002181 <unknown>
+#13 0x59204e019412 <unknown>
+#14 0x59204dfe625f <unknown>
+#15 0x59204e03d528 <unknown>
+#16 0x59204e03d723 <unknown>
+#17 0x59204e04e0e4 <unknown>
+#18 0x7f5db9094ac3 <unknown>
+

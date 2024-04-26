@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Sasta IMDb</title>
+        <title>Home</title>
     </head>
     <body>
         <!-- searching movie -->
-        <h1>Home</h1>
+        <h1 id="main">Home</h1>
         <% if(username !== '') { %>
             <h2>Hello, <%= username %></h2>
         <% } %>
@@ -64,7 +64,7 @@
                 <img id="Image" width="200px" src="<%= currentMovie.Image %>" alt="Movie Image">
             <% } %>
             <% if(outSideReviews.RottenTomatoes != undefined && outSideReviews.RottenTomatoes != []){ %>
-                <h2>Reviews from RottenTomatoes</h2>
+                <h2>Reviews from Rotten Tomatoes</h2>
                 <ul>
                     <% for(let i=0; i<outSideReviews.RottenTomatoes.length; i++) { %> 
                         <li><a style="color: blue" href="<%= outSideReviews.RottenTomatoes[i][1] %>"><%= outSideReviews.RottenTomatoes[i][0] %></a>: <%= outSideReviews.RottenTomatoes[i][2] %></li>
