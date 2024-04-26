@@ -80,10 +80,12 @@ for movie in movies:
             button.click()
         except Exception:
             try:
+                # if we couldn't open, let's try scrolling till we find it
                 button = movie.find_element(By.CSS_SELECTOR, 'button.ipc-icon-button.cli-info-icon')
                 button.location_once_scrolled_into_view
                 button.click()
             except Exception as e:
+                # if we still couldn't find it, we'll note it
                 error_url_list.append(url)
                 error_msg_list.append(e)
                 continue
