@@ -86,8 +86,8 @@ for movieReviewed in reviews:
                 movieReviewed["RottenTomatoes"].append(["", "", reviewText])
                 print(e)
         
-        with open('dynamic_output.json', 'w'):
-            json.dump(reviews)
+        with open('dynamic_output.json', 'w') as f:
+            json.dump(reviews, f)
 
-with open('output.json', 'w'):
-    json.dump(reviews)
+with open('output.json', 'w') as f:
+    json.dump(reviews, f)
