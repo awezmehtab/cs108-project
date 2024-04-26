@@ -160,6 +160,7 @@ function searchSuggest(movieEntered, movieData) {
 app.get('/', (req, res) => {
     const username = req.query.username ? req.query.username : '';
     searchSuggestions = [];
+    outSideReviews = [];
 
     // RATING from our USERS
     fs.readFile('users.json', 'utf8', (err, data) => {
@@ -191,6 +192,29 @@ app.get('/', (req, res) => {
             if (!atleastOneFound) {
                 userRating = '';
             }
+            
+            // if there was a movie found, we'll also send outSideReviews of it
+            // for that we need to open ../dataExtraction/output.json
+            fs.readFile('output.json', 'utf8', (err, data) => {
+                if(err){
+                    console.log("Error in reading output.json", err)
+                    console.log("outSideReviews", outSideReviews)
+                    res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: []});
+                }
+                else{
+                    try {
+                        reviews = JSON.parse(data)
+                        foundMovie = reviews.find(m => m.Title == myMovie.Title)
+                        outSideReviews = {"RottenTomatoes": foundMovie.RottenTomatoes, "Metacritic": foundMovie.Metacritic}
+                    }
+                    catch(err) {
+                        console.log("Error in parsing data")
+                    }
+                    console.log("outSideReviews", outSideReviews)
+                    res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: outSideReviews});
+                }  
+            })
+            
         }
         // if the last movie searched is 'Movie Not Found', then we need to send search suggestions.
         else {
@@ -200,8 +224,9 @@ app.get('/', (req, res) => {
                 searchSuggestions = searchSuggest(movieEntered, movieData);
             }
             userRating = '';
+            console.log("outSideReviews", outSideReviews)
+            res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: []});
         }
-        res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions});
     });  
 
 //  res.render('index', { movies: movies, username: username, userReviews: userReviews});

@@ -63,6 +63,14 @@
             <% if(currentMovie.Image) { %>
                 <img id="Image" width="200px" src="<%= currentMovie.Image %>" alt="Movie Image">
             <% } %>
+            <% if(outSideReviews.RottenTomatoes != undefined && outSideReviews.RottenTomatoes != []){ %>
+                <h2>Reviews from RottenTomatoes</h2>
+                <ul>
+                    <% for(let i=0; i<outSideReviews.RottenTomatoes.length; i++) { %> 
+                        <li><a style="color: blue" href="<%= outSideReviews.RottenTomatoes[i][1] %>"><%= outSideReviews.RottenTomatoes[i][0] %></a>: <%= outSideReviews.RottenTomatoes[i][2] %></li>
+                    <% } %>
+                </ul>
+            <% } %>
         <% } else if (movies.length == 0) { %>
         <% } else if (searchSuggestions.length > 0) { %>
             <h2>Did you mean these?</h2>
