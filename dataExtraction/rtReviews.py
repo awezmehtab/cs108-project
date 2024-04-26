@@ -30,10 +30,6 @@ driver = webdriver.Chrome()
 i=1
 for movie in movieReviews:
     try:
-        # Make the url
-        # url_m = f'https://www.google.com/search?q={movie["Title"].strip().replace(" ", "+")}+metacritic+user+reviews'
-        # url_r = f'https://www.google.com/search?q={movie["Title"].strip().replace(" ", "+")}+rotten+tomatoes+user+reviews'
-        url_m = f'https://metacritic.com/movie/{movie["Title"].strip().lower().replace(" ", "-")}/user-reviews'
         r_string = movie["Title"].strip().lower().replace(" ", "_").replace(",", "").replace(":", "").replace("'","")
         url_r = f'https://www.rottentomatoes.com/m/{r_string}/reviews?type=top_critics'
 
