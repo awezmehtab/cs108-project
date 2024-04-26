@@ -198,7 +198,6 @@ app.get('/', (req, res) => {
             fs.readFile('../dataExtraction/output.json', 'utf8', (err, data) => {
                 if(err){
                     console.log("Error in reading output.json", err)
-                    console.log("outSideReviews", outSideReviews)
                     res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: []});
                 }
                 else{
@@ -210,7 +209,6 @@ app.get('/', (req, res) => {
                     catch(err) {
                         console.log("Error in parsing data")
                     }
-                    console.log("outSideReviews", outSideReviews)
                     res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: outSideReviews});
                 }  
             })

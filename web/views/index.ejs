@@ -63,7 +63,7 @@
             <% if(currentMovie.Image) { %>
                 <img id="Image" width="200px" src="<%= currentMovie.Image %>" alt="Movie Image">
             <% } %>
-            <% if(outSideReviews.RottenTomatoes != undefined && outSideReviews.RottenTomatoes != []){ %>
+            <% if(outSideReviews.RottenTomatoes != undefined && outSideReviews.RottenTomatoes.length > 0){ %>
                 <h2>Reviews from Rotten Tomatoes</h2>
                 <ul>
                     <% for(let i=0; i<outSideReviews.RottenTomatoes.length; i++) { %> 
