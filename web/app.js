@@ -195,7 +195,7 @@ app.get('/', (req, res) => {
             
             // if there was a movie found, we'll also send outSideReviews of it
             // for that we need to open ../dataExtraction/output.json
-            fs.readFile('output.json', 'utf8', (err, data) => {
+            fs.readFile('../dataExtraction/output.json', 'utf8', (err, data) => {
                 if(err){
                     console.log("Error in reading output.json", err)
                     console.log("outSideReviews", outSideReviews)
@@ -224,7 +224,6 @@ app.get('/', (req, res) => {
                 searchSuggestions = searchSuggest(movieEntered, movieData);
             }
             userRating = '';
-            console.log("outSideReviews", outSideReviews)
             res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: []});
         }
     });  

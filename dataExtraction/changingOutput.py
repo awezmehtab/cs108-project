@@ -33,7 +33,7 @@ def click(driver, webElement):
         try:
             # let's try to scroll and check
             button = webElement
-            driver.execute_script("arguments[0].scrollIntoView(true);", button)
+            driver.execute_script("arguments[0].scrollIntoView(false);", button)
             button.click()
         except Exception as e:
             print(e, file=open('errors.txt', 'a'))
@@ -63,7 +63,8 @@ for movieReviewed in reviews:
             driver.get(search_url)
 
             # list of webelements which contain the clickable movie name (link)
-            searchedMovie = driver.find_elements(By.CSS_SELECTOR, 'a[data-qa="info-name"]')[0]
+            import re
+            searchedMovie = driver.find_elements(By.CSS_SELECTOR, 'a[data-qa="info-name"]')[1] if re.match("^Star", movieReviewed['Title']) else driver.find_elements(By.CSS_SELECTOR, 'a[data-qa="info-name"]')[0]
 
             # let's click it using our click() function
             click(driver, searchedMovie)
