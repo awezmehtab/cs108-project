@@ -66,14 +66,12 @@
                     <% if(username !=='' ) { %>
                         <p class="navbar-text">Hi, <%= username %>
                         </p>
-                        <% } %>
-                            <li><a href="<%= username === '' ? '/signup' : '/signup?username=' + username %>"><span
-                                        class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                            <li><a href="<%= username === '' ? '/login' : '/login?username=' + username %>"><span
-                                        class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                            <% if(username !=='' ) { %>
-                                <li><a href="/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                                <% } %>
+                    <% } %>
+                    <li><a href="<%= username === '' ? '/signup' : '/signup?username=' + username %>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="<%= username === '' ? '/login' : '/login?username=' + username %>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <% if(username !=='' ) { %>
+                        <li><a href="/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <% } %>
                 </ul>
             </div>
         </div>
@@ -128,15 +126,15 @@
                             </ul>
                         </div>
                         <div class="media-right">
-                            <img width="300px" src="<%=currentMovie.Image%>" alt="">
+                            <img class="img-rounded" width="300px" src="<%=currentMovie.Image%>" alt="">
                         </div>
                     </div>
                 </div>
-                <% } %>
+            <% } %>
 
 
-                <% if(outSideReviews.RottenTomatoes !=undefined && outSideReviews.RottenTomatoes.length> 0){ %>
-                    <div class="container" style="margin-top: 10px;">
+            <% if(outSideReviews.RottenTomatoes !=undefined && outSideReviews.RottenTomatoes.length> 0){ %>
+                <div class="container" style="margin-top: 10px;">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h2 class="panel-title">
@@ -156,20 +154,79 @@
                                 </div>
                             <% } %>
                         </div>
-                    </div>
+                </div>
                 <% } %>
     <% } else if (movies.length==0) { %>
-        <h2>Search for a movie</h2>
-    <% } else if (searchSuggestions.length> 0) { %>
-        <h2>Did you mean these?</h2>
-        <ul>
-            <% for(let i=0; i<searchSuggestions.length; i++) { %>
-                <li><a style="color: blue;"
-                        href="/submit?movieName=<%= searchSuggestions[i].Title %>&username=<%=username%>">
-                        <%= searchSuggestions[i].Title %>
-                    </a></li>
+        <div class="container">
+            <% if(username !== '') { %>
+                <h2>Hey <%= username %>, Check these out: </h2>
+            <% } else { %>
+                <h2>Check these out: </h2>
+            <% } %>
+            <% for(let j=0; j<Math.floor(suggestedMovies.length/4); j++) { %>
+                <div class="row">
+                    <% for(let i=0; i<4; i++)  { %>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <a href="<%= username !== '' ? '/submit?movieName=' + suggestedMovies[4*j+i].Title + '&username=' + username : '/submit?movieName=' + suggestedMovies[4*j+i].Title%>">
+                                    <img width="300px" src="<%= suggestedMovies[4*j + i].Image %>" alt="<%= suggestedMovies[4*j + i].Title %>">
+                                    <div class="caption">
+                                        <p><%= suggestedMovies[4*j + i].Title %></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+            <div class="row">
+                <% for(let i=4*Math.floor(suggestedMovies.length/4); i<suggestedMovies.length; i++)  { %>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <a href="<%= username !== '' ? '/submit?movieName=' + suggestedMovies[i].Title + '&username=' + username : '/submit?movieName=' + suggestedMovies[i].Title%>">
+                                <img width="300px" src="<%= suggestedMovies[i].Image %>" alt="<%= suggestedMovies[i].Title %>">
+                                <div class="caption">
+                                    <p><%= suggestedMovies[i].Title %></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 <% } %>
-        </ul>
+            </div>
+    <% } else if (searchSuggestions.length> 0) { %>
+        <div class="container">
+            <h2>Did you mean these?</h2>
+            <% for(let j=0; j<Math.floor(searchSuggestions.length/3); j++) { %>
+                <div class="row">
+                    <% for(let i=0; i<3; i++)  { %>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="/submit?movieName=<%= searchSuggestions[3*j+i].Title %>&username=<%=username%>>">
+                                    <img width="300px" src="<%= searchSuggestions[3*j + i].Image %>" alt="<%= searchSuggestions[3*j + i].Title %>">
+                                    <div class="caption">
+                                        <p><%= searchSuggestions[3*j + i].Title %></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+            <div class="row">
+                <% for(let i=3*Math.floor(searchSuggestions.length/3); i<searchSuggestions.length; i++)  { %>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="/submit?movieName=<%= searchSuggestions[i].Title %>&username=<%=username%>">
+                                <img width="300px" src="<%= searchSuggestions[i].Image %>" alt="<%= searchSuggestions[i].Title %>">
+                                <div class="caption">
+                                    <p><%= searchSuggestions[i].Title %></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
     <% } %>
 
 </body>

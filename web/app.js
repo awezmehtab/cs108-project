@@ -171,6 +171,14 @@ app.get('/', (req, res) => {
         if(err) {
             console.log('Somethings wrong in reading users.json: ', err);
         }
+        let userInfo = data ? JSON.parse(data) : [];
+        let ratedMovies = userInfo.find(user => user.username === username) ? userInfo.find(user => user.username === username).ratedMovies : [];
+        let ratings = userInfo.find(user => user.username === username) ? userInfo.find(user => user.username === username).ratings : [];
+        let suggestedMovies = suggestingMovies(ratedMovies, ratings, movieData);
+        if (ratedMovies.length === 0) {
+            const movieDataCopy = [...movieData];
+            suggestedMovies = movieDataCopy.sort((a, b) => Number(b.Rating) - Number(a.Rating)).slice(0, 5);
+        }
         // if there are movies searched
         if (movies.length > 0 && movies[movies.length - 1].Title !== 'Movie Not Found') {
             const myMovie = movies[movies.length - 1];
@@ -202,7 +210,7 @@ app.get('/', (req, res) => {
             fs.readFile('../dataExtraction/output.json', 'utf8', (err, data) => {
                 if(err){
                     console.log("Error in reading output.json", err)
-                    res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: []});
+                    res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: [], suggestedMovies: suggestedMovies});
                 }
                 else{
                     try {
@@ -213,7 +221,7 @@ app.get('/', (req, res) => {
                     catch(err) {
                         console.log("Error in parsing data")
                     }
-                    res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: outSideReviews});
+                    res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: outSideReviews, suggestedMovies: suggestedMovies});
                 }  
             })
             
@@ -226,7 +234,7 @@ app.get('/', (req, res) => {
                 searchSuggestions = searchSuggest(movieEntered, movieData);
             }
             userRating = '';
-            res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: []});
+            res.render('index', { movies: movies, username: username, userRating: userRating, searchSuggestions: searchSuggestions, outSideReviews: [], suggestedMovies: suggestedMovies});
         }
     });  
 
