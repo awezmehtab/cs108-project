@@ -2,6 +2,7 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const { distance, closest } = require('fastest-levenshtein');
 
 // creating an express "app"
@@ -35,6 +36,9 @@ fs.readFile('imdb.json', 'utf8', (err, data) => {
 
 // setting view engine
 app.set('view engine', 'ejs');
+
+// serving static files (css) from views/css directory
+app.use(express.static(path.join(__dirname, 'css')));
 
 // middleware for parsing http request body
 app.use(bodyParser.urlencoded({ extended: false }));
