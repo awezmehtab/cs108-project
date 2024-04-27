@@ -18,12 +18,11 @@ def base64_to_png(base64_string, output_file):
   # Save the image as PNG
   image.save(output_file, "PNG")
 
-base64_str = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5ElEQVR4AaVTwQ3CMBDrBFXf/bYD0AWQ8qDvbMC32+SVFVggU8AusELxIUcYRYlAVLIa5Xx27nLpat9jmT0QCd/9+t0PU0LiTiSNtVwHJgTgCpGXAP62DowNteSeZCOdxZ0iH3t9ISDBC8iLrUXQsFgs7xcCSNoQOAIjBZ24O+6N5Gzq7K1hwE1OkRNOBho4iRs3Ad66HYE9Q0irmKxakvCiBaME2wIlIkuYE1CUAEEpYXJAWYK41JqoPRkhIk1sXKO4ta9RBykn6SBVhqtvjTIS3qNs4DpQbPj2XSQ5QWpQ/3vOTx/NNw2nGop1AAAAAElFTkSuQmCC"
 
 import json
 
-with open('images.json', 'r') as file:
+with open('sp_images.json', 'r') as file:
     images = json.load(file)
 
 for rater, img in images.items():
-    base64_to_png(img, f'images/{rater.lower().replace(" ", "_")}.png')
+    base64_to_png(img, f'sp_images/{rater.lower().replace(" ", "_")}.png')

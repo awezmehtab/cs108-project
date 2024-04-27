@@ -9,8 +9,8 @@ with open('imdb.json', 'r') as file:
 raters = set()
 
 for movie in movies:
-    movie["Other_Ratings"] = json.loads(movie["Other_Ratings"].replace("'", "\""))
-    for x in movie["Other_Ratings"][1]:
+    movie["Streaming_Platforms"] = json.loads(movie["Streaming_Platforms"].replace("'", "\""))
+    for x in movie["Streaming_Platforms"][0]:
         raters.add(x)
 
 print(raters)
@@ -29,4 +29,4 @@ for rater in raters:
         print(f'Couldn\'t find image for {rater}')
 
 driver.quit()
-json.dump(images , open('images.json', 'w'))
+json.dump(images , open('sp_images.json', 'w'))
