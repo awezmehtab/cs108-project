@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="movie.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -60,16 +62,22 @@
         </div>
     </nav>
 
-
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
+    <div class="container">
+        <form action="<%= username? '/login?username=' + username : '/login' %>" method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" name="username" placeholder="Username" required>
+                <input class="form-control" type="password" name="password" placeholder="Password" required>
+                <button class="btn btn-default" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
     <% if(warning == 1) { %>
-        <div class="alert">
-            <strong>Invalid Username or Password</strong>
-        </div>
+        <div class="container">
+            <div class="alert alert-warning alert-dismissible">
+                <a href="<%= username? '/login?username=' + username : '/login' %>">&times;</a>
+                <strong>Invalid Username or Password</strong>
+            </div>
+        </div>  
     <% } %>
 </body>
 </html>
