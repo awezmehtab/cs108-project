@@ -90,3 +90,647 @@ Stacktrace:
 #17 0x5c785a0730e4 <unknown>
 #18 0x75571fa94ac3 <unknown>
 
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Godfather
+Couldn't click this movie: The Dark Knight
+Couldn't click this movie: The Godfather Part II
+Couldn't click this movie: 12 Angry Men
+Couldn't click this movie: Schindler's List
+Couldn't click this movie: The Lord of the Rings: The Return of the King
+Couldn't click this movie: Pulp Fiction
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Godfather
+Couldn't click this movie: The Dark Knight
+Couldn't click this movie: The Godfather Part II
+Couldn't click this movie: 12 Angry Men
+Couldn't click this movie: Schindler's List
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Shawshank Redemption
+Couldn't click this movie: The Godfather
+Couldn't click this movie: The Dark Knight
+Couldn't click this movie: The Godfather Part II
+Couldn't click this movie: 12 Angry Men
+Couldn't click this movie: Schindler's List
+Couldn't click this movie: The Lord of the Rings: The Return of the King
+Couldn't click this movie: Pulp Fiction
+Couldn't click this movie: The Lord of the Rings: The Fellowship of the Ring
+Couldn't click this movie: The Good, the Bad and the Ugly
+Couldn't click this movie: Forrest Gump
+Couldn't click this movie: The Lord of the Rings: The Two Towers
+Couldn't click this movie: Fight Club
+Couldn't click this movie: Inception
+Couldn't click this movie: Dune: Part Two
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x597ecc84cf33 <unknown>
+#1 0x597ecc544b37 <unknown>
+#2 0x597ecc590ec8 <unknown>
+#3 0x597ecc584d27 <unknown>
+#4 0x597ecc5b1eb2 <unknown>
+#5 0x597ecc5846b8 <unknown>
+#6 0x597ecc5b207e <unknown>
+#7 0x597ecc5d0899 <unknown>
+#8 0x597ecc5b1c53 <unknown>
+#9 0x597ecc582db3 <unknown>
+#10 0x597ecc58377e <unknown>
+#11 0x597ecc81286b <unknown>
+#12 0x597ecc816885 <unknown>
+#13 0x597ecc800181 <unknown>
+#14 0x597ecc817412 <unknown>
+#15 0x597ecc7e425f <unknown>
+#16 0x597ecc83b528 <unknown>
+#17 0x597ecc83b723 <unknown>
+#18 0x597ecc84c0e4 <unknown>
+#19 0x7d4910a94ac3 <unknown>
+
+Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x597ecc84cf33 <unknown>
+#1 0x597ecc544ce6 <unknown>
+#2 0x597ecc554c25 <unknown>
+#3 0x597ecc54aa18 <unknown>
+#4 0x597ecc54ab41 <unknown>
+#5 0x597ecc548e11 <unknown>
+#6 0x597ecc54c112 <unknown>
+#7 0x597ecc5d18a8 <unknown>
+#8 0x597ecc5b1eb2 <unknown>
+#9 0x597ecc5d0899 <unknown>
+#10 0x597ecc5b1c53 <unknown>
+#11 0x597ecc582db3 <unknown>
+#12 0x597ecc58377e <unknown>
+#13 0x597ecc81286b <unknown>
+#14 0x597ecc816885 <unknown>
+#15 0x597ecc800181 <unknown>
+#16 0x597ecc817412 <unknown>
+#17 0x597ecc7e425f <unknown>
+#18 0x597ecc83b528 <unknown>
+#19 0x597ecc83b723 <unknown>
+#20 0x597ecc84c0e4 <unknown>
+#21 0x7d4910a94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x597ecc84cf33 <unknown>
+#1 0x597ecc544b37 <unknown>
+#2 0x597ecc590ec8 <unknown>
+#3 0x597ecc584d27 <unknown>
+#4 0x597ecc5b1eb2 <unknown>
+#5 0x597ecc5846b8 <unknown>
+#6 0x597ecc5b207e <unknown>
+#7 0x597ecc5d0899 <unknown>
+#8 0x597ecc5b1c53 <unknown>
+#9 0x597ecc582db3 <unknown>
+#10 0x597ecc58377e <unknown>
+#11 0x597ecc81286b <unknown>
+#12 0x597ecc816885 <unknown>
+#13 0x597ecc800181 <unknown>
+#14 0x597ecc817412 <unknown>
+#15 0x597ecc7e425f <unknown>
+#16 0x597ecc83b528 <unknown>
+#17 0x597ecc83b723 <unknown>
+#18 0x597ecc84c0e4 <unknown>
+#19 0x7d4910a94ac3 <unknown>
+
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x597ecc84cf33 <unknown>
+#1 0x597ecc544ce6 <unknown>
+#2 0x597ecc51b8cd <unknown>
+#3 0x597ecc5ba76d <unknown>
+#4 0x597ecc5d0226 <unknown>
+#5 0x597ecc5b1c53 <unknown>
+#6 0x597ecc582db3 <unknown>
+#7 0x597ecc58377e <unknown>
+#8 0x597ecc81286b <unknown>
+#9 0x597ecc816885 <unknown>
+#10 0x597ecc800181 <unknown>
+#11 0x597ecc817412 <unknown>
+#12 0x597ecc7e425f <unknown>
+#13 0x597ecc83b528 <unknown>
+#14 0x597ecc83b723 <unknown>
+#15 0x597ecc84c0e4 <unknown>
+#16 0x7d4910a94ac3 <unknown>
+
+Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddce6 <unknown>
+#2 0x5e76d35edc25 <unknown>
+#3 0x5e76d35e3a18 <unknown>
+#4 0x5e76d35e3b41 <unknown>
+#5 0x5e76d35e1e11 <unknown>
+#6 0x5e76d35e5112 <unknown>
+#7 0x5e76d366a8a8 <unknown>
+#8 0x5e76d364aeb2 <unknown>
+#9 0x5e76d3669899 <unknown>
+#10 0x5e76d364ac53 <unknown>
+#11 0x5e76d361bdb3 <unknown>
+#12 0x5e76d361c77e <unknown>
+#13 0x5e76d38ab86b <unknown>
+#14 0x5e76d38af885 <unknown>
+#15 0x5e76d3899181 <unknown>
+#16 0x5e76d38b0412 <unknown>
+#17 0x5e76d387d25f <unknown>
+#18 0x5e76d38d4528 <unknown>
+#19 0x5e76d38d4723 <unknown>
+#20 0x5e76d38e50e4 <unknown>
+#21 0x74dcffa94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddb37 <unknown>
+#2 0x5e76d3629ec8 <unknown>
+#3 0x5e76d361dd27 <unknown>
+#4 0x5e76d364aeb2 <unknown>
+#5 0x5e76d361d6b8 <unknown>
+#6 0x5e76d364b07e <unknown>
+#7 0x5e76d3669899 <unknown>
+#8 0x5e76d364ac53 <unknown>
+#9 0x5e76d361bdb3 <unknown>
+#10 0x5e76d361c77e <unknown>
+#11 0x5e76d38ab86b <unknown>
+#12 0x5e76d38af885 <unknown>
+#13 0x5e76d3899181 <unknown>
+#14 0x5e76d38b0412 <unknown>
+#15 0x5e76d387d25f <unknown>
+#16 0x5e76d38d4528 <unknown>
+#17 0x5e76d38d4723 <unknown>
+#18 0x5e76d38e50e4 <unknown>
+#19 0x74dcffa94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddb37 <unknown>
+#2 0x5e76d3629ec8 <unknown>
+#3 0x5e76d361dd27 <unknown>
+#4 0x5e76d364aeb2 <unknown>
+#5 0x5e76d361d6b8 <unknown>
+#6 0x5e76d364b07e <unknown>
+#7 0x5e76d3669899 <unknown>
+#8 0x5e76d364ac53 <unknown>
+#9 0x5e76d361bdb3 <unknown>
+#10 0x5e76d361c77e <unknown>
+#11 0x5e76d38ab86b <unknown>
+#12 0x5e76d38af885 <unknown>
+#13 0x5e76d3899181 <unknown>
+#14 0x5e76d38b0412 <unknown>
+#15 0x5e76d387d25f <unknown>
+#16 0x5e76d38d4528 <unknown>
+#17 0x5e76d38d4723 <unknown>
+#18 0x5e76d38e50e4 <unknown>
+#19 0x74dcffa94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddb37 <unknown>
+#2 0x5e76d3629ec8 <unknown>
+#3 0x5e76d361dd27 <unknown>
+#4 0x5e76d364aeb2 <unknown>
+#5 0x5e76d361d6b8 <unknown>
+#6 0x5e76d364b07e <unknown>
+#7 0x5e76d3669899 <unknown>
+#8 0x5e76d364ac53 <unknown>
+#9 0x5e76d361bdb3 <unknown>
+#10 0x5e76d361c77e <unknown>
+#11 0x5e76d38ab86b <unknown>
+#12 0x5e76d38af885 <unknown>
+#13 0x5e76d3899181 <unknown>
+#14 0x5e76d38b0412 <unknown>
+#15 0x5e76d387d25f <unknown>
+#16 0x5e76d38d4528 <unknown>
+#17 0x5e76d38d4723 <unknown>
+#18 0x5e76d38e50e4 <unknown>
+#19 0x74dcffa94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddb37 <unknown>
+#2 0x5e76d3629ec8 <unknown>
+#3 0x5e76d361dd27 <unknown>
+#4 0x5e76d364aeb2 <unknown>
+#5 0x5e76d361d6b8 <unknown>
+#6 0x5e76d364b07e <unknown>
+#7 0x5e76d3669899 <unknown>
+#8 0x5e76d364ac53 <unknown>
+#9 0x5e76d361bdb3 <unknown>
+#10 0x5e76d361c77e <unknown>
+#11 0x5e76d38ab86b <unknown>
+#12 0x5e76d38af885 <unknown>
+#13 0x5e76d3899181 <unknown>
+#14 0x5e76d38b0412 <unknown>
+#15 0x5e76d387d25f <unknown>
+#16 0x5e76d38d4528 <unknown>
+#17 0x5e76d38d4723 <unknown>
+#18 0x5e76d38e50e4 <unknown>
+#19 0x74dcffa94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddb37 <unknown>
+#2 0x5e76d3629ec8 <unknown>
+#3 0x5e76d361dd27 <unknown>
+#4 0x5e76d364aeb2 <unknown>
+#5 0x5e76d361d6b8 <unknown>
+#6 0x5e76d364b07e <unknown>
+#7 0x5e76d3669899 <unknown>
+#8 0x5e76d364ac53 <unknown>
+#9 0x5e76d361bdb3 <unknown>
+#10 0x5e76d361c77e <unknown>
+#11 0x5e76d38ab86b <unknown>
+#12 0x5e76d38af885 <unknown>
+#13 0x5e76d3899181 <unknown>
+#14 0x5e76d38b0412 <unknown>
+#15 0x5e76d387d25f <unknown>
+#16 0x5e76d38d4528 <unknown>
+#17 0x5e76d38d4723 <unknown>
+#18 0x5e76d38e50e4 <unknown>
+#19 0x74dcffa94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5e76d38e5f33 <unknown>
+#1 0x5e76d35ddb37 <unknown>
+#2 0x5e76d3629ec8 <unknown>
+#3 0x5e76d361dd27 <unknown>
+#4 0x5e76d364aeb2 <unknown>
+#5 0x5e76d361d6b8 <unknown>
+#6 0x5e76d364b07e <unknown>
+#7 0x5e76d3669899 <unknown>
+#8 0x5e76d364ac53 <unknown>
+#9 0x5e76d361bdb3 <unknown>
+#10 0x5e76d361c77e <unknown>
+#11 0x5e76d38ab86b <unknown>
+#12 0x5e76d38af885 <unknown>
+#13 0x5e76d3899181 <unknown>
+#14 0x5e76d38b0412 <unknown>
+#15 0x5e76d387d25f <unknown>
+#16 0x5e76d38d4528 <unknown>
+#17 0x5e76d38d4723 <unknown>
+#18 0x5e76d38e50e4 <unknown>
+#19 0x74dcffa94ac3 <unknown>
+
+Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x59311560af33 <unknown>
+#1 0x593115302ce6 <unknown>
+#2 0x593115312c25 <unknown>
+#3 0x593115308a18 <unknown>
+#4 0x593115308b41 <unknown>
+#5 0x593115306e11 <unknown>
+#6 0x59311530a112 <unknown>
+#7 0x59311538f8a8 <unknown>
+#8 0x59311536feb2 <unknown>
+#9 0x59311538e899 <unknown>
+#10 0x59311536fc53 <unknown>
+#11 0x593115340db3 <unknown>
+#12 0x59311534177e <unknown>
+#13 0x5931155d086b <unknown>
+#14 0x5931155d4885 <unknown>
+#15 0x5931155be181 <unknown>
+#16 0x5931155d5412 <unknown>
+#17 0x5931155a225f <unknown>
+#18 0x5931155f9528 <unknown>
+#19 0x5931155f9723 <unknown>
+#20 0x59311560a0e4 <unknown>
+#21 0x77298a094ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x59311560af33 <unknown>
+#1 0x593115302b37 <unknown>
+#2 0x59311534eec8 <unknown>
+#3 0x593115342d27 <unknown>
+#4 0x59311536feb2 <unknown>
+#5 0x5931153426b8 <unknown>
+#6 0x59311537007e <unknown>
+#7 0x59311538e899 <unknown>
+#8 0x59311536fc53 <unknown>
+#9 0x593115340db3 <unknown>
+#10 0x59311534177e <unknown>
+#11 0x5931155d086b <unknown>
+#12 0x5931155d4885 <unknown>
+#13 0x5931155be181 <unknown>
+#14 0x5931155d5412 <unknown>
+#15 0x5931155a225f <unknown>
+#16 0x5931155f9528 <unknown>
+#17 0x5931155f9723 <unknown>
+#18 0x59311560a0e4 <unknown>
+#19 0x77298a094ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x59311560af33 <unknown>
+#1 0x593115302b37 <unknown>
+#2 0x59311534eec8 <unknown>
+#3 0x593115342d27 <unknown>
+#4 0x59311536feb2 <unknown>
+#5 0x5931153426b8 <unknown>
+#6 0x59311537007e <unknown>
+#7 0x59311538e899 <unknown>
+#8 0x59311536fc53 <unknown>
+#9 0x593115340db3 <unknown>
+#10 0x59311534177e <unknown>
+#11 0x5931155d086b <unknown>
+#12 0x5931155d4885 <unknown>
+#13 0x5931155be181 <unknown>
+#14 0x5931155d5412 <unknown>
+#15 0x5931155a225f <unknown>
+#16 0x5931155f9528 <unknown>
+#17 0x5931155f9723 <unknown>
+#18 0x59311560a0e4 <unknown>
+#19 0x77298a094ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x59311560af33 <unknown>
+#1 0x593115302b37 <unknown>
+#2 0x59311534eec8 <unknown>
+#3 0x593115342d27 <unknown>
+#4 0x59311536feb2 <unknown>
+#5 0x5931153426b8 <unknown>
+#6 0x59311537007e <unknown>
+#7 0x59311538e899 <unknown>
+#8 0x59311536fc53 <unknown>
+#9 0x593115340db3 <unknown>
+#10 0x59311534177e <unknown>
+#11 0x5931155d086b <unknown>
+#12 0x5931155d4885 <unknown>
+#13 0x5931155be181 <unknown>
+#14 0x5931155d5412 <unknown>
+#15 0x5931155a225f <unknown>
+#16 0x5931155f9528 <unknown>
+#17 0x5931155f9723 <unknown>
+#18 0x59311560a0e4 <unknown>
+#19 0x77298a094ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x59311560af33 <unknown>
+#1 0x593115302b37 <unknown>
+#2 0x59311534eec8 <unknown>
+#3 0x593115342d27 <unknown>
+#4 0x59311536feb2 <unknown>
+#5 0x5931153426b8 <unknown>
+#6 0x59311537007e <unknown>
+#7 0x59311538e899 <unknown>
+#8 0x59311536fc53 <unknown>
+#9 0x593115340db3 <unknown>
+#10 0x59311534177e <unknown>
+#11 0x5931155d086b <unknown>
+#12 0x5931155d4885 <unknown>
+#13 0x5931155be181 <unknown>
+#14 0x5931155d5412 <unknown>
+#15 0x5931155a225f <unknown>
+#16 0x5931155f9528 <unknown>
+#17 0x5931155f9723 <unknown>
+#18 0x59311560a0e4 <unknown>
+#19 0x77298a094ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x59311560af33 <unknown>
+#1 0x593115302b37 <unknown>
+#2 0x59311534eec8 <unknown>
+#3 0x593115342d27 <unknown>
+#4 0x59311536feb2 <unknown>
+#5 0x5931153426b8 <unknown>
+#6 0x59311537007e <unknown>
+#7 0x59311538e899 <unknown>
+#8 0x59311536fc53 <unknown>
+#9 0x593115340db3 <unknown>
+#10 0x59311534177e <unknown>
+#11 0x5931155d086b <unknown>
+#12 0x5931155d4885 <unknown>
+#13 0x5931155be181 <unknown>
+#14 0x5931155d5412 <unknown>
+#15 0x5931155a225f <unknown>
+#16 0x5931155f9528 <unknown>
+#17 0x5931155f9723 <unknown>
+#18 0x59311560a0e4 <unknown>
+#19 0x77298a094ac3 <unknown>
+
+Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x5cb6ac998f33 <unknown>
+#1 0x5cb6ac690ce6 <unknown>
+#2 0x5cb6ac6a0c25 <unknown>
+#3 0x5cb6ac696a18 <unknown>
+#4 0x5cb6ac696b41 <unknown>
+#5 0x5cb6ac694e11 <unknown>
+#6 0x5cb6ac698112 <unknown>
+#7 0x5cb6ac71d8a8 <unknown>
+#8 0x5cb6ac6fdeb2 <unknown>
+#9 0x5cb6ac71c899 <unknown>
+#10 0x5cb6ac6fdc53 <unknown>
+#11 0x5cb6ac6cedb3 <unknown>
+#12 0x5cb6ac6cf77e <unknown>
+#13 0x5cb6ac95e86b <unknown>
+#14 0x5cb6ac962885 <unknown>
+#15 0x5cb6ac94c181 <unknown>
+#16 0x5cb6ac963412 <unknown>
+#17 0x5cb6ac93025f <unknown>
+#18 0x5cb6ac987528 <unknown>
+#19 0x5cb6ac987723 <unknown>
+#20 0x5cb6ac9980e4 <unknown>
+#21 0x7fd1bee94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5cb6ac998f33 <unknown>
+#1 0x5cb6ac690b37 <unknown>
+#2 0x5cb6ac6dcec8 <unknown>
+#3 0x5cb6ac6d0d27 <unknown>
+#4 0x5cb6ac6fdeb2 <unknown>
+#5 0x5cb6ac6d06b8 <unknown>
+#6 0x5cb6ac6fe07e <unknown>
+#7 0x5cb6ac71c899 <unknown>
+#8 0x5cb6ac6fdc53 <unknown>
+#9 0x5cb6ac6cedb3 <unknown>
+#10 0x5cb6ac6cf77e <unknown>
+#11 0x5cb6ac95e86b <unknown>
+#12 0x5cb6ac962885 <unknown>
+#13 0x5cb6ac94c181 <unknown>
+#14 0x5cb6ac963412 <unknown>
+#15 0x5cb6ac93025f <unknown>
+#16 0x5cb6ac987528 <unknown>
+#17 0x5cb6ac987723 <unknown>
+#18 0x5cb6ac9980e4 <unknown>
+#19 0x7fd1bee94ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x5cb6ac998f33 <unknown>
+#1 0x5cb6ac690b37 <unknown>
+#2 0x5cb6ac6dcec8 <unknown>
+#3 0x5cb6ac6d0d27 <unknown>
+#4 0x5cb6ac6fdeb2 <unknown>
+#5 0x5cb6ac6d06b8 <unknown>
+#6 0x5cb6ac6fe07e <unknown>
+#7 0x5cb6ac71c899 <unknown>
+#8 0x5cb6ac6fdc53 <unknown>
+#9 0x5cb6ac6cedb3 <unknown>
+#10 0x5cb6ac6cf77e <unknown>
+#11 0x5cb6ac95e86b <unknown>
+#12 0x5cb6ac962885 <unknown>
+#13 0x5cb6ac94c181 <unknown>
+#14 0x5cb6ac963412 <unknown>
+#15 0x5cb6ac93025f <unknown>
+#16 0x5cb6ac987528 <unknown>
+#17 0x5cb6ac987723 <unknown>
+#18 0x5cb6ac9980e4 <unknown>
+#19 0x7fd1bee94ac3 <unknown>
+
+Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x62e8b0f8df33 <unknown>
+#1 0x62e8b0c85ce6 <unknown>
+#2 0x62e8b0c95c25 <unknown>
+#3 0x62e8b0c8ba18 <unknown>
+#4 0x62e8b0c8bb41 <unknown>
+#5 0x62e8b0c89e11 <unknown>
+#6 0x62e8b0c8d112 <unknown>
+#7 0x62e8b0d128a8 <unknown>
+#8 0x62e8b0cf2eb2 <unknown>
+#9 0x62e8b0d11899 <unknown>
+#10 0x62e8b0cf2c53 <unknown>
+#11 0x62e8b0cc3db3 <unknown>
+#12 0x62e8b0cc477e <unknown>
+#13 0x62e8b0f5386b <unknown>
+#14 0x62e8b0f57885 <unknown>
+#15 0x62e8b0f41181 <unknown>
+#16 0x62e8b0f58412 <unknown>
+#17 0x62e8b0f2525f <unknown>
+#18 0x62e8b0f7c528 <unknown>
+#19 0x62e8b0f7c723 <unknown>
+#20 0x62e8b0f8d0e4 <unknown>
+#21 0x78148e294ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x62e8b0f8df33 <unknown>
+#1 0x62e8b0c85b37 <unknown>
+#2 0x62e8b0cd1ec8 <unknown>
+#3 0x62e8b0cc5d27 <unknown>
+#4 0x62e8b0cf2eb2 <unknown>
+#5 0x62e8b0cc56b8 <unknown>
+#6 0x62e8b0cf307e <unknown>
+#7 0x62e8b0d11899 <unknown>
+#8 0x62e8b0cf2c53 <unknown>
+#9 0x62e8b0cc3db3 <unknown>
+#10 0x62e8b0cc477e <unknown>
+#11 0x62e8b0f5386b <unknown>
+#12 0x62e8b0f57885 <unknown>
+#13 0x62e8b0f41181 <unknown>
+#14 0x62e8b0f58412 <unknown>
+#15 0x62e8b0f2525f <unknown>
+#16 0x62e8b0f7c528 <unknown>
+#17 0x62e8b0f7c723 <unknown>
+#18 0x62e8b0f8d0e4 <unknown>
+#19 0x78148e294ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x62e8b0f8df33 <unknown>
+#1 0x62e8b0c85b37 <unknown>
+#2 0x62e8b0cd1ec8 <unknown>
+#3 0x62e8b0cc5d27 <unknown>
+#4 0x62e8b0cf2eb2 <unknown>
+#5 0x62e8b0cc56b8 <unknown>
+#6 0x62e8b0cf307e <unknown>
+#7 0x62e8b0d11899 <unknown>
+#8 0x62e8b0cf2c53 <unknown>
+#9 0x62e8b0cc3db3 <unknown>
+#10 0x62e8b0cc477e <unknown>
+#11 0x62e8b0f5386b <unknown>
+#12 0x62e8b0f57885 <unknown>
+#13 0x62e8b0f41181 <unknown>
+#14 0x62e8b0f58412 <unknown>
+#15 0x62e8b0f2525f <unknown>
+#16 0x62e8b0f7c528 <unknown>
+#17 0x62e8b0f7c723 <unknown>
+#18 0x62e8b0f8d0e4 <unknown>
+#19 0x78148e294ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x62e8b0f8df33 <unknown>
+#1 0x62e8b0c85b37 <unknown>
+#2 0x62e8b0cd1ec8 <unknown>
+#3 0x62e8b0cc5d27 <unknown>
+#4 0x62e8b0cf2eb2 <unknown>
+#5 0x62e8b0cc56b8 <unknown>
+#6 0x62e8b0cf307e <unknown>
+#7 0x62e8b0d11899 <unknown>
+#8 0x62e8b0cf2c53 <unknown>
+#9 0x62e8b0cc3db3 <unknown>
+#10 0x62e8b0cc477e <unknown>
+#11 0x62e8b0f5386b <unknown>
+#12 0x62e8b0f57885 <unknown>
+#13 0x62e8b0f41181 <unknown>
+#14 0x62e8b0f58412 <unknown>
+#15 0x62e8b0f2525f <unknown>
+#16 0x62e8b0f7c528 <unknown>
+#17 0x62e8b0f7c723 <unknown>
+#18 0x62e8b0f8d0e4 <unknown>
+#19 0x78148e294ac3 <unknown>
+
+Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x62e8b0f8df33 <unknown>
+#1 0x62e8b0c85b37 <unknown>
+#2 0x62e8b0cd1ec8 <unknown>
+#3 0x62e8b0cc5d27 <unknown>
+#4 0x62e8b0cf2eb2 <unknown>
+#5 0x62e8b0cc56b8 <unknown>
+#6 0x62e8b0cf307e <unknown>
+#7 0x62e8b0d11899 <unknown>
+#8 0x62e8b0cf2c53 <unknown>
+#9 0x62e8b0cc3db3 <unknown>
+#10 0x62e8b0cc477e <unknown>
+#11 0x62e8b0f5386b <unknown>
+#12 0x62e8b0f57885 <unknown>
+#13 0x62e8b0f41181 <unknown>
+#14 0x62e8b0f58412 <unknown>
+#15 0x62e8b0f2525f <unknown>
+#16 0x62e8b0f7c528 <unknown>
+#17 0x62e8b0f7c723 <unknown>
+#18 0x62e8b0f8d0e4 <unknown>
+#19 0x78148e294ac3 <unknown>
+
