@@ -173,11 +173,11 @@ for movie in movies:
         # close the dialog
         try:
             wait = WebDriverWait(driver, WAIT_UNTIL_BUTTON_LOADS)
-            close_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'div.ipc-promptable-base__close button')))
+            close_button = wait.until(EC.element_to_be_clickable(movie.find_element(By.CSS_SELECTOR, 'div.ipc-promptable-base__close button')))
             close_button.click()
         except Exception:
             try:
-                close_button = dialog.find_element(By.CSS_SELECTOR, 'div.ipc-promptable-base__close button')
+                close_button = movie.find_element(By.CSS_SELECTOR, 'div.ipc-promptable-base__close button')
                 close_button.location_once_scrolled_into_view
                 close_button.click()
             except Exception as e:
