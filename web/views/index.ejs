@@ -90,7 +90,7 @@
                                 <div id="main-image-div">
                                     <div id="main-img-info">
                                         <div id="main-img-title"><%= currentMovie.Title %></div>
-                                        <div id="durationRating"><%= currentMovie.Year_Released%>, <%=  currentMovie.Duration  %></div>
+                                        <div id="durationRating"><strong><%= currentMovie.Year_Released%>, <%=  currentMovie.Duration  %>, <%= currentMovie.Age_Rating %></strong></div>
                                         <div id="genres"><%= currentMovie.Genres.join(", ") %></div>
                                         <a href="<%= currentMovie.Trailer_Links %>">
                                             <button id="trailer" type="button" class="btn btn-default">
@@ -107,6 +107,16 @@
                                 <div id="side-img-div">
                                     <img id="side-img" src="<%= currentMovie.Image %>" alt="<%= currentMovie.Title %>" class="img-fluid">
                                 </div>
+                                <% if(userRating!=='' ) { %>
+                                    <div class="container" id="main-userReviews">
+                                        <h4><strong>Rating by our Users</strong></h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p><%= userRating %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="col-md-6">
                                 <div id="main-reviews" class="row">
@@ -128,15 +138,21 @@
                                 </div>
                                 <div id="main-plot"  class="row">
                                     <div class="col-md-12">
-                                        <p>
-                                            <%= currentMovie.Plots %>
-                                        </p>
+                                        <p><%= currentMovie.Plots %></p>
+                                    </div>
+                                </div>
+                                <div id="main-cast-directors" class="row">
+                                    <div class="col-md-12">
+                                        <h3><strong>Cast</strong></h3>
+                                        <p><%= currentMovie.Casts.join(" | ") %></p>
+                                        <h3><strong>Directors</strong></h3>
+                                        <p><%= currentMovie.Directors.join(" | ") %></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div id="main-suggestions" class="container">
-                                    <h3 style="text-align: center;" >You might like this</h3>
+                                    <h3 style="text-align: center;" ><strong>You might like this</strong></h3>
                                     <% for(let i=0; i < suggestedMovies.length; i++) { %>
                                         <div class="row">
                                             <div class="col-md-12 sugg-items">
@@ -147,6 +163,28 @@
                                         </div>
                                     <% } %>
                                 </div>
+                                <% if(currentMovie.Streaming_Platforms[0].length) { %>
+                                    <div id="main-streaming" class="container">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><strong>Where to watch?</strong></h3></div>
+                                        </div>
+                                        <% for(let i=0; i<currentMovie.Streaming_Platforms[0].length; i++) { %>
+                                            <div class="row">
+                                                <div class="col-md-1"></div>
+                                                <div style="margin: 20px 0;" class="col-md-2 ">
+                                                    <img src="<%='/sp_images/' + currentMovie.Streaming_Platforms[0][i].toLowerCase().replace(/ /g, '_') + '.png' %>" alt="">
+
+                                                </div>
+                                                <div style="margin: 25px 0;" class="col-md-6">
+                                                    <a style="color: black;" href="<%= currentMovie.Streaming_Platforms[1][i] %>">
+                                                        <strong><%= currentMovie.Streaming_Platforms[0][i] %></strong>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -267,7 +305,7 @@
                     <% for(let i=0; i<3; i++)  { %>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="/submit?movieName=<%= searchSuggestions[3*j+i].Title %>&username=<%=username%>>">
+                                <a href="/submit?movieName=<%= searchSuggestions[3*j+i].Title %>&username=<%=username%>">
                                     <img width="300px" src="<%= searchSuggestions[3*j + i].Image %>" alt="<%= searchSuggestions[3*j + i].Title %>">
                                     <div class="caption">
                                         <p><%= searchSuggestions[3*j + i].Title %></p>

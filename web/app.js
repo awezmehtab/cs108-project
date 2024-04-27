@@ -7,7 +7,7 @@ const { distance, closest } = require('fastest-levenshtein');
 
 // creating an express "app"
 const app = express();
-const port = 3003;
+const port = 3010;
 
 // all the movies used by this server.
 // this contains an array of all movies, each movie is unstringified
