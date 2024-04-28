@@ -446,7 +446,7 @@ app.post('/login', (req, res) => {
             }
             else {
                 console.log('User doesn\'t exist or password is wrong');
-                res.render('login', {warning: 1, username: username ? username : ''});
+                res.render('login', {warning: 1, username: req.query.username ? req.query.username : ''});
             }
         }
         catch(err) {
