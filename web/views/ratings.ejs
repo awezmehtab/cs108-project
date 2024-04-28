@@ -62,10 +62,10 @@
     <div id="rating-form" class="container">
         <h1><strong>Rate a Movie</strong></h1>
         <form action="/ratings" method="post">
-            <div class="form-group">
+            <div style="display: flex;" class="form-group">
                 <input class="form-control" type="text" name="movieName" placeholder="Enter Movie Name" required>
                 <input class="form-control" type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10" required>
-                <button class="btn btn-default" type="submit">Submit</button>
+                <button style="justify-content: center;" class="btn btn-default" type="submit">Submit</button>
             </div>
         </form>
         
