@@ -1,15 +1,4 @@
-.caption {
-    position: relative;
-}
-
-.main-rating-number {
-    position: absolute;
-    right: 5%;
-    bottom: 2%;
-    display: inline;
-}
-
-#rating-form {
+#login-signup-form {
     margin-top: 60px;
     width: 25%;
     border:  1px solid;
