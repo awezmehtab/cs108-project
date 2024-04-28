@@ -438,7 +438,7 @@ app.post('/login', (req, res) => {
         if(err) {
             console.log('Somethings wrong in reading users.json: ', err);
         }
-        try {
+        try { 
             const userInfo = data ? JSON.parse(data) : [];
             const index = userInfo.findIndex(user => user.username === username);
             if(index !== -1 && userInfo[index].password === password) {
