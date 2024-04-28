@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="movie.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login-signup.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Login</title>
@@ -62,7 +63,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div id="login-signup-form" class="container">
         <form action="<%= username? '/login?username=' + username : '/login' %>" method="post">
             <div class="form-group">
                 <input class="form-control" type="text" name="username" placeholder="Username" required>
