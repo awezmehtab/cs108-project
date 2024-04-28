@@ -7,7 +7,7 @@ const { distance, closest } = require('fastest-levenshtein');
 
 // creating an express "app"
 const app = express();
-const port = 3030;
+const port = 3000;
 
 // all the movies used by this server.
 // this contains an array of all movies, each movie is unstringified
@@ -560,6 +560,16 @@ app.use((err, req, res, next) => {
 });
 
 // all requests taken from port 3002
-app.listen(port, () => {
-    console.log(`port ${port} ki request sun rahe hai bas`)
-})
+let newPort = port;
+let serverStarted = false;
+
+while (!serverStarted) {
+    try {
+        app.listen(newPort, () => {
+            console.log(`Ctrl + Click on this link: http://localhost:${newPort}`);
+        });
+        serverStarted = true;
+    } catch (error) {
+        newPort++;
+    }
+}
