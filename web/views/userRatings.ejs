@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="movie.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ratings.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>ratings</title>
@@ -65,32 +66,94 @@
         </div>
     </nav>
     
-    <h1>Reviews</h1>
-    <form action="/userRatings?username=<%=username%>" method="post">
-        <input type="text" name="movieName" placeholder="Enter Movie Name" required>
-        <input type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10" required>
-        <button type="submit">Submit</button>
-    </form>
+    <!--RATING FORM-->
+    <div id="rating-form" class="container">
+        <h1><strong>Rate a Movie</strong></h1>
+        <form action="/userRatings?username=<%=username%>" method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" name="movieName" placeholder="Enter Movie Name" required>
+                <input class="form-control" type="number" name="rating" step="0.1" placeholder="Enter rating" min="0" max="10" required>
+                <button class="btn btn-default" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
     
-    <!--wrong movie name-->
-    <% if (typeof warning === 'object') { %>
-        <div id="search-suggest">
-            Did you mean: 
-            <ul>
-                <% for(let i=0; i<warning.length; i++) { %>
-                    <li><%=warning[i].Title%></li>
+    <!--SEARCH SUGGESTIONS-->
+    <% if(typeof warning === 'object' && warning.length > 0) { %>
+        <div class="container">
+            <h2><strong>Did you mean these?</strong></h2>
+            <% for(let j=0; j<Math.floor(warning.length/4); j++) { %>
+                <div class="row">
+                    <% for(let i=0; i<4; i++)  { %>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <a href="/submit?movieName=<%= warning[4*j+i].Title + '&username=' + username%>">
+                                    <img width="300px" src="<%= warning[4*j + i].Image %>" alt="<%= warning[4*j + i].Title %>">
+                                    <div class="caption">
+                                        <h4 style="display: inline;"><%= warning[4*j + i].Title %></h4>
+                                        <h4 class="main-rating-number"><%= warning[4*j + i].Rating %></h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+            <div class="row">
+                <% for(let i=4*Math.floor(suggestedMovies.length/4); i<suggestedMovies.length; i++)  { %>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <a href="/submit?movieName=<%= suggestedMovies[i].Title  + '&username=' + username%>">
+                                <img width="300px" src="<%= suggestedMovies[i].Image %>" alt="<%= suggestedMovies[i].Title %>">
+                                <div class="caption">
+                                    <h4 style="display: inline;"><%= suggestedMovies[i].Title %></h4>
+                                    <h4 class="main-rating-number"><%= suggestedMovies[i].Rating %></h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 <% } %>
-            </ul>
+            </div>
         </div>
     <% } %>
 
+    <!--RATED MOVIES-->
     <% if(ratings.length > 0) { %>
-        <ul>
-            <h2>Rated Movies: </h2>
-            <% for(let i=0; i<ratings.length; i++) { %>
-                <li><%= ratedMovies[i].Title %> : <%= ratings[i] %></li>
+        <div class="container" id="main-ratedMovies">
+            <h1><strong>Rated Movies</strong></h1>
+            <% for(let j=0; j<Math.floor(ratedMovies.length/4); j++) { %>
+                <div class="row">
+                    <% for(let i=0; i<4; i++)  { %>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <a href="/submit?movieName=<%= ratedMovies[4*j+i].Title  + '&username=' + username %>">
+                                    <img width="300px" src="<%= ratedMovies[4*j + i].Image %>" alt="<%= ratedMovies[4*j + i].Title %>">
+                                    <div class="caption">
+                                        <h4 style="display: inline;"><%= ratedMovies[4*j + i].Title %></h4>
+                                        <h4 class="main-rating-number"><%= ratings[4*j + i] %> <span class="glyphicon glyphicon-star"></span> </h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
             <% } %>
-        </ul>
+            <div class="row">
+                <% for(let i=4*Math.floor(ratedMovies.length/4); i<ratedMovies.length; i++)  { %>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <a href="/submit?movieName=<%= ratedMovies[i].Title + '&username=' + username %>">
+                                <img width="300px" src="<%= ratedMovies[i].Image %>" alt="<%= ratedMovies[i].Title %>">
+                                <div class="caption">
+                                    <h4 style="display: inline;"><%= ratedMovies[i].Title %></h4>
+                                    <h4 class="main-rating-number"><%= ratings[i] %> <span class="glyphicon glyphicon-star"></span></h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
     <% } %>
 
     <% if(warning == 2) { %>
@@ -99,15 +162,43 @@
         </div>
     <% } %>
     
-    <div id="suggestions">
-        <% if(suggestedMovies.length > 0) { %>
-            <ul>
-                <h2>Suggested Movies: </h2>
-                <% for(let i=0; i<suggestedMovies.length; i++) { %>
-                    <li><%= suggestedMovies[i].Title %> : <%= suggestedMovies[i].Rating %></li>
+    <!--SUGGESTED MOVIES-->
+    <% if(suggestedMovies.length > 0) { %>
+        <div class="container" id="main-suggestions">
+            <h1><strong>Suggested Movies</strong></h1>
+            <% for(let j=0; j<Math.floor(suggestedMovies.length/4); j++) { %>
+                <div class="row">
+                    <% for(let i=0; i<4; i++)  { %>
+                        <div class="col-md-3">
+                            <div class="thumbnail">
+                                <a href="/submit?movieName=<%= suggestedMovies[4*j+i].Title + '&username=' + username %>">
+                                    <img width="300px" src="<%= suggestedMovies[4*j + i].Image %>" alt="<%= suggestedMovies[4*j + i].Title %>">
+                                    <div class="caption">
+                                        <h4 style="display: inline;"><%= suggestedMovies[4*j + i].Title %></h4>
+                                        <h4 class="main-rating-number"><%= suggestedMovies[4*j + i].Rating %> <span class="glyphicon glyphicon-star"></span></h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+            <div class="row">
+                <% for(let i=4*Math.floor(suggestedMovies.length/4); i<suggestedMovies.length; i++)  { %>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <a href="/submit?movieName=<%= suggestedMovies[i].Title + '&username=' + username %>">
+                                <img width="300px" src="<%= suggestedMovies[i].Image %>" alt="<%= suggestedMovies[i].Title %>">
+                                <div class="caption">
+                                    <h4 style="display: inline;"><%= suggestedMovies[i].Title %></h4>
+                                    <h4 class="main-rating-number"><%= suggestedMovies[i].Rating %> <span class="glyphicon glyphicon-star"></span></h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 <% } %>
-            </ul>
-        <% } %>
-    </div>
+            </div>
+        </div>
+    <% } %>
 </body>
 </html>
