@@ -140,6 +140,9 @@
     <% if(ratings.length > 0) { %>
         <div class="container" id="main-ratedMovies">
             <h1><strong>Rated Movies</strong></h1>
+            <% ratedMovies.reverse(); %>
+            <% ratings.reverse(); %>
+            
             <% for(let j=0; j<Math.floor(ratedMovies.length/4); j++) { %>
                 <div class="row">
                     <% for(let i=0; i<4; i++)  { %>
