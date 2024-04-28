@@ -270,9 +270,9 @@
     <% } else if (movies.length==0) { %>
         <div class="container">
             <% if(username !== '') { %>
-                <h2>Hey <%= username %>, Check these out: </h2>
+                <h2><strong>Hey <%= username %>, Check these out, or Search for Movies </h2>
             <% } else { %>
-                <h2>Check these out: </h2>
+                <h2><strong>Check these out, or Search for Movies</strong> </h2>
             <% } %>
             <% for(let j=0; j<Math.floor(suggestedMovies.length/4); j++) { %>
                 <div class="row">
@@ -282,7 +282,7 @@
                                 <a href="<%= username !== '' ? '/submit?movieName=' + suggestedMovies[4*j+i].Title + '&username=' + username : '/submit?movieName=' + suggestedMovies[4*j+i].Title%>">
                                     <img width="300px" src="<%= suggestedMovies[4*j + i].Image %>" alt="<%= suggestedMovies[4*j + i].Title %>">
                                     <div class="caption">
-                                        <p><%= suggestedMovies[4*j + i].Title %></p>
+                                        <h4 style="text-align: center;"><strong><%= suggestedMovies[4*j + i].Title %></strong></h4>
                                     </div>
                                 </a>
                             </div>
@@ -297,7 +297,7 @@
                             <a href="<%= username !== '' ? '/submit?movieName=' + suggestedMovies[i].Title + '&username=' + username : '/submit?movieName=' + suggestedMovies[i].Title%>">
                                 <img width="300px" src="<%= suggestedMovies[i].Image %>" alt="<%= suggestedMovies[i].Title %>">
                                 <div class="caption">
-                                    <p><%= suggestedMovies[i].Title %></p>
+                                    <h4 style="text-align: center;"><strong><%= suggestedMovies[i].Title %></strong></h4>
                                 </div>
                             </a>
                         </div>
@@ -318,7 +318,7 @@
                                 <a href="/submit?movieName=<%= searchSuggestions[3*j+i].Title %>&username=<%=username%>">
                                     <img width="300px" src="<%= searchSuggestions[3*j + i].Image %>" alt="<%= searchSuggestions[3*j + i].Title %>">
                                     <div class="caption">
-                                        <p><%= searchSuggestions[3*j + i].Title %></p>
+                                        <h3 style="text-align: center;"><strong><%= searchSuggestions[3*j + i].Title %></strong></h3>
                                     </div>
                                 </a>
                             </div>
