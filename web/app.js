@@ -563,7 +563,10 @@ app.use((err, req, res, next) => {
 let newPort = port;
 let serverStarted = false;
 
-app.listen(process.env.PORT || 10000, '0.0.0.0', () => {
+let server = app.listen(process.env.PORT || 10000, '0.0.0.0', () => {
     console.log(`Server started`);
     serverStarted = true;
 });
+
+server.keepAliveTimeout = 120000; // Keep alive timeout in milliseconds
+server.headersTimeout = 120000; // Headers timeout in milliseconds
