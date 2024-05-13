@@ -557,16 +557,14 @@ app.get('/logout', (req, res) => {
 app.use((err, req, res, next) => {
     console.log(err);
     res.status(500).send('kuch GANDA sa GALAT hua hai: ' + err);
+    next();
 });
 
 // all requests taken from port 3002
-let newPort = port;
+let newPort = process.env.PORT || 10000;
 let serverStarted = false;
 
-let server = app.listen(process.env.PORT || 10000, '0.0.0.0', () => {
+let server = app.listen(newPort, '0.0.0.0', () => {
     console.log(`Server started`);
     serverStarted = true;
 });
-
-server.keepAliveTimeout = 120000; // Keep alive timeout in milliseconds
-server.headersTimeout = 120000; // Headers timeout in milliseconds
