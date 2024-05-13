@@ -563,13 +563,7 @@ app.use((err, req, res, next) => {
 let newPort = port;
 let serverStarted = false;
 
-while (!serverStarted) {
-    try {
-        app.listen(newPort, () => {
-            console.log(`Ctrl + Click on this link: http://localhost:${newPort}`);
-        });
-        serverStarted = true;
-    } catch (error) {
-        newPort++;
-    }
-}
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server started at port ${port}`);
+    serverStarted = true;
+});
