@@ -563,7 +563,7 @@ app.use((err, req, res, next) => {
 let newPort = port;
 let serverStarted = false;
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 10000, '0.0.0.0', () => {
     console.log(`Server started`);
     serverStarted = true;
 });
