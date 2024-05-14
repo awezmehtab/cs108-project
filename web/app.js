@@ -568,3 +568,7 @@ let server = app.listen(newPort, '0.0.0.0', () => {
     console.log(`Server started at port ${newPort} and running properly`);
     serverStarted = true;
 });
+
+// Increase the server timeout to 120 seconds
+server.keepAliveTimeout = 120000; // Keep alive timeout
+server.headersTimeout = 120000; // Headers timeout
