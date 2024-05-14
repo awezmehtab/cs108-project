@@ -565,6 +565,6 @@ let newPort = process.env.PORT || 10000;
 let serverStarted = false;
 
 let server = app.listen(newPort, '0.0.0.0', () => {
-    console.log(`Server started`);
+    console.log(`Server started at port ${newPort} and running properly`);
     serverStarted = true;
 });
